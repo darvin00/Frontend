@@ -1,0 +1,98 @@
+nav {
+  background-color: #f8f9fa;
+  padding: 1rem;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: 0.3s;
+
+        &.active {
+          background-color: green;
+          color: white;
+        }
+        &:hover {
+          background-color: green;
+          color: white;
+        }
+
+        &.active-sheshine {
+          background-color: #ff6347;
+          color: white;
+        }
+
+        &.active-shine {
+          background-color: #32cd32;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+
+  // Removing !important from this rule
+  .collapse {
+    // Allow Bootstrap's default behavior to handle collapsibility
+  }
+}
+
+// Adjustments for smaller screens
+@media (max-width: 425px) {
+  nav {
+    padding: 0.5rem;
+
+    ul {
+      flex-direction: column;
+      text-align: center;
+
+      li {
+        margin: 0.5rem 0;
+
+        a {
+          padding: 0.5rem;
+          display: block;
+        }
+      }
+    }
+  }
+}
+.navbar {
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%); // Hide by moving up
+}
+
+.navbar-show-top {
+  position: fixed; // Fix the navbar to the top
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030; // To make sure it stays above other content
+}
+.close-icon {
+  font-size: 1.5rem;
+  color: #000;
+  line-height: 1;
+}

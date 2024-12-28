@@ -1,0 +1,219 @@
+<div class="container">
+  <h2 *ngIf="productId; else addProduct">Update Product</h2>
+  <ng-template #addProduct>
+    <h5>Sheshine New Product</h5>
+  </ng-template>
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input id="title" formControlName="title" class="form-control" placeholder="Enter title" required>
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        Title is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" class="form-control" placeholder="Enter name" required>
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" class="form-control" placeholder="Enter description"
+        required></textarea>
+
+    </div>
+
+    <div class="form-group">
+      <label for="mrp">MRP</label>
+      <input id="mrp" formControlName="mrp" type="number" class="form-control" placeholder="Enter MRP" required>
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        MRP is required.
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input id="price" formControlName="price" type="number" class="form-control" placeholder="Enter price" required>
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        Price is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="stockQuantity">Stock Quantity</label>
+      <input id="stockQuantity" formControlName="stockQuantity" type="number" class="form-control"
+        placeholder="Enter stock quantity" required>
+
+    </div>
+
+    <div class="form-group">
+      <label for="discount">Discount</label>
+      <input id="discount" formControlName="discount" type="number" class="form-control" placeholder="Enter discount">
+
+    </div>
+
+    <div class="form-group">
+      <label for="averageRating">Average Rating</label>
+      <input id="averageRating" formControlName="averageRating" type="number" class="form-control"
+        placeholder="Enter average rating">
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="sheShine">SheShine</label>
+      <input id="sheShine" formControlName="sheShine" type="checkbox"> She Shine
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        SheShine is required.
+      </div>
+    </div>
+
+
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select id="category" formControlName="category" class="form-control" required>
+      <option value="" disabled selected>Select a category</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+
+
+
+    <div class="form-group">
+      <label for="suitable">Suitable For</label>
+      <input id="suitable" formControlName="suitable" class="form-control" placeholder="Enter suitable skin types">
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        Suitable is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="keybenefit">Key Benefit</label>
+      <input id="keybenefit" formControlName="keybenefit" class="form-control" placeholder="Enter key benefit">
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        Key Benefit is required.
+      </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+      <label for="size">Size</label>
+      <input id="size" formControlName="size" class="form-control" placeholder="Enter size">
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        Size is required.
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="specialLine">Special Line</label>
+      <input id="specialLine" formControlName="specialLine" class="form-control" placeholder="Enter special line">
+      <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+        Special Line is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="feature">Feature</label>
+      <input id="feature" formControlName="feature" type="checkbox"> Feature
+    </div>
+
+    <div class="form-group">
+      <label for="trend">Trend</label>
+      <input id="trend" formControlName="trend" type="checkbox"> Trend
+    </div>
+
+    <div class="form-group">
+      <label for="special">Special</label>
+      <input id="special" formControlName="special" type="checkbox"> Special
+    </div>
+
+    <div class="form-group">
+      <label>Main Image</label>
+      <input type="file" (change)="onFileChange($event, 'mainImage')" class="form-control" accept="image/*">
+    </div>
+
+    <div class="form-group">
+      <label>Thumbnail</label>
+      <input type="file" (change)="onFileChange($event, 'thumbnail')" class="form-control" accept="image/*">
+    </div>
+
+
+
+    <div class="form-group">
+      <label>Images</label>
+      <input type="file" (change)="onFileChange($event, 'images')" class="form-control" accept="image/*" multiple>
+    </div>
+
+    <!-- Display Warning Message -->
+    <div *ngIf="fillAllFieldsMessage" class="alert alert-danger mt-3">
+      Please fill all required fields before submitting.
+    </div>
+
+
+    <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="isSubmitting">
+    {{ isSubmitting ? 'Submitting...' : 'Submit' }}
+</button>
+<a class="btn btn-secondary" (click)="resetForm()">Cancel</a>
+</form>
+
+<!-- Success Message -->
+<div *ngIf="isSubmitted" class="alert alert-success mt-3">
+  Form submitted successfully!
+</div>
+</div>
+
+
+<div class="container mt-5">
+  <h2>Product Management</h2>
+
+  <!-- Search Input with Search Icon Button -->
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search by ID or Name" [(ngModel)]="searchQuery">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="filterProducts()">
+        <i class="fa fa-search"></i> <!-- Search Icon -->
+      </button>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Stock Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price | currency:'INR' }}</td>
+        <td>{{ product.stockQuantity }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="updateProduct(product.id); scrollToTop()">Update</button>
+
+          <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

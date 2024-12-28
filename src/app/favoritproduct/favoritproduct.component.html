@@ -1,0 +1,39 @@
+<div class="container mt-5 product-overview-Block">
+  <div class="row" *ngIf="products.length > 0; else noProducts">
+    <div class="col-lg-3 col-sm-6 col-md-6 mb-4" *ngFor="let product of filteredProducts">
+      <div class="card">
+        <!-- Remove Favorite X icon -->
+        <button class="remove-favorite" (click)="removeFavorite(product.id)">
+          &times;
+        </button>
+
+        <img src="{{ product.thumbnail }}" class="card-img-top" alt="Product Image" (click)="buyNow(product)">
+
+        <div class="card-body">
+          <p class="card-title">{{ product.name }}</p>
+          <p class="card-benefit benefit-reg" style="height: 36px;">{{ product.benefit }}</p>
+          <p class="card-text">
+            <small class="text-muted"><b>MRP: </b> <del>{{ product.mrp | currency:'INR' }}</del></small>
+          </p>
+          <p class="card-price">₹{{ product.price }}</p>
+          <div>
+            <button class="card-btn" (click)="addToCart(product)" [disabled]="isProductAdding[product.id]">
+              <ng-container *ngIf="isProductAdding[product.id]">Adding...</ng-container>
+              <ng-container *ngIf="!isProductAdding[product.id]">
+                {{ isProductAdded[product.id] ? 'Added Successfully' : 'Add to Cart' }}
+              </ng-container>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noProducts>
+    <div class="spinner-load" *ngIf="loading">
+      <div class="lds-dual-ring"></div>
+    </div>
+    <div *ngIf="!loading && products.length === 0">
+      No product 
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,50 @@
+<div class="form-container">
+  <form [formGroup]="customerForm" (ngSubmit)="submitCustomer()" class="customer-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" type="text" class="form-control" placeholder="Enter customer name" />
+    </div>
+
+    <div class="form-group">
+      <label for="text">Text</label>
+      <textarea id="text" formControlName="text" class="form-control" placeholder="Enter customer text"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="customerImg">Upload Image</label>
+      <input id="customerImg" type="file" (change)="onFileSelected($event)" class="form-control-file" />
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="customerForm.invalid" class="btn btn-primary btn-submit">
+        {{ editMode ? 'Update Customer' : 'Add Customer' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<div class="customer-list">
+  <h3>Customers</h3>
+  <table class="table table-customers">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Text</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.id }}</td>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.text }}</td>
+        <td>
+          <!-- <button class="btn btn-warning" (click)="editCustomer(customer)">Edit</button> -->
+          <button class="btn btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,361 @@
+.product-detail {
+  padding: 20px;
+
+  .main_image {
+    width: 100%;
+    position: fixed;
+    margin-bottom: 20px; // For mobile view
+  }
+
+  .img-thumbnail {
+    max-width: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .product-details {
+    // height: calc(100vh - 40px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .details-content {
+    padding: 10px;
+
+    .card-title {
+      margin-bottom: 0;
+      font-size: 28px;
+      font-family: 'Lora', serif;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    .card-text {
+      font-family: 'Lora', serif;
+      color: #8a8a8a;
+      font-size: 15px;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    .content {
+      .card-text {
+        border-bottom: 1px solid #e2dfdf;
+      }
+    }
+
+    .card-text-special {
+      font-size: 12px;
+      margin-bottom: 0;
+      font-family: 'Lora', serif;
+    }
+  }
+
+  .product-rating {
+    font-size: 9px;
+    line-height: 1.5;
+    color: #f3c012;
+    margin-top: 0;
+
+    span {
+      font-size: 12px;
+      display: flex;
+      gap: 3px;
+    }
+
+    .txt-rate {
+      font-size: 12px;
+    }
+  }
+
+  .quantity-btn {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C1908B;
+    color: #C1908B;
+    cursor: pointer;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+  .review-section,
+  .reviews-section {
+    margin-top: 20px;
+  }
+
+  .reviews-container {
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .review {
+      background: #f8f8f8;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .btn-cart {
+    background: rgb(244, 245, 247);
+    background: linear-gradient(111deg, rgb(244, 245, 247) 0%, rgb(217, 220, 228) 57%);
+    border: unset;
+
+    &:hover {
+      background: #99015B;
+      color: #fff;
+    }
+  }
+
+  .collapsible {
+    background-color: white;
+    color: rgb(15, 7, 7);
+    cursor: pointer;
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 1px solid #e2dfdf;
+
+    &.active,
+    &:hover {
+      background-color: #ffffff;
+    }
+
+    &:after {
+      content: '+';
+      font-size: 25px;
+      color: black;
+      float: right;
+      margin-left: 5px;
+    }
+
+    &.active:after {
+      content: "-";
+    }
+
+    .content {
+      padding: 0;
+      display: none;
+      overflow: hidden;
+      background-color: white;
+
+      .card-text {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  .product-mrpPrize {
+    .card-text {
+      margin: 5px 0;
+    }
+
+    .prize {
+      font-weight: 700 !important;
+      font-size: 20px;
+      color: #202020;
+    }
+
+    .prize-detail {
+      .spec-prize {
+        color: #0caf12;
+        font-weight: 700;
+        font-family: 'Lora', serif;
+        font-size: 14px;
+      }
+
+      del {
+        margin-left: 5px;
+      }
+    }
+
+    .card-text-off {
+      margin: 0;
+
+      small {
+        color: #0caf12 !important;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .product-buy-add {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+
+    button {
+      margin-top: 10px;
+    }
+  }
+
+  .spinner-load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+
+    &::after {
+      content: " ";
+      display: block;
+      width: 46px;
+      height: 46px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 5px solid #ccc;
+      border-color: #ccc transparent #ccc transparent;
+      animation: lds-dual-ring 1.2s linear infinite;
+    }
+  }
+
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.col-md-6 {
+  display: flex !important;
+  flex-direction:row !important;
+
+  .main_image {
+    position: relative;
+    flex-grow: 1;
+
+    img.slide {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &.text-danger {
+        color: #dc3545;
+      }
+    }
+  }
+
+  .option {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    justify-content: flex-start !important;
+
+    .scroll-container {
+      display: flex;
+    overflow: hidden;
+    width: 100%;
+    flex-direction: column;
+
+      img {
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-right: 0.5rem;
+        flex: 0 0 auto;
+        width: 100px;
+        height: 100px;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .option-mobile {
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      padding: 0.5rem 0;
+
+      img {
+        flex: 0 0 auto;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 0.5rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}
+
+/* Media query for mobile-specific styles */
+@media (max-width: 767px) {
+  .col-md-6 {
+    flex-direction: column;
+
+    .main_image {
+      margin-bottom: 1rem;
+    }
+
+    .option-mobile {
+      .scroll-container {
+        display: flex;
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .col-md-6{
+    flex-direction: column !important;
+  }
+}

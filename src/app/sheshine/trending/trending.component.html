@@ -1,0 +1,32 @@
+<section class="trending-block">
+  <div class="trending-main">
+    <div class="trending-title">
+      <h3 class="header-3">Trending Product</h3>
+    </div>
+  </div>
+   <!-- src/app/card/card.component.html -->
+<div class="container" >
+  <div class="card-container row" >
+    <div class="col-12 col-md-6 col-lg-3" (click)="buyProduct(trendingproduct)" *ngFor="let trendingproduct of trendingProducts">
+      <div class="card"  >
+        <img
+  [src]="trendingproduct?.thumbnail || 'assets/images/alternative-image.jpg'"
+  class="card-img-top"
+  alt="Card image"
+  (error)="onImageError($event)">
+
+         <!-- <img src="{{trendingproduct.thumbnail  }}" class="card-img-top" alt="Card image"> -->
+       
+        <div class="product-body">
+          <div class="product-body-title">
+            <p class="product-title">{{ trendingproduct.title }}</p>
+          </div>
+          <div class="product-prize">
+          <p class="product-title">₹{{ trendingproduct.price }}</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

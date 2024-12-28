@@ -1,0 +1,254 @@
+.about {
+  .about-block {
+    .about-titlemain {
+      padding: 20px 0 50px 0;
+
+      .about-title {
+        letter-spacing: 0;
+        text-transform: none;
+        font-family: Lora, serif !important;
+        font-size: 40px;
+        line-height: 55px;
+        text-align: center;
+        font-weight: 400;
+        color: #000;
+        margin-bottom: 0;
+      }
+    }
+
+    .about-desc-block {
+      .about-desc {
+        .about-main {
+          .about-mainTitle {
+            font-size: 30px;
+            letter-spacing: initial;
+            text-transform: none !important;
+            font-weight: bold;
+            font-family: Lora, serif !important;
+            text-transform: none !important;
+            font-weight: normal;
+            line-height: 1.3;
+            margin-bottom: 10px;
+
+            // text-align: center;
+            span {
+              font-style: normal;
+              background: linear-gradient(to right, #BF953F, #FCF6BA, #838728, #FBF5B7, #AA771C);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-family: lora;
+              font-weight: 600;
+            }
+          }
+
+          .about-mainImportant {
+            .about-desc-main {
+              font-size: 18px;
+              font-weight: medium;
+              font-family: Nimbus Sans, sans-serif;
+              color: #1d3e2e;
+              line-height: 28px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.right-block {
+  .img-cover {
+    width: 100%;
+    height: 500px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+}
+
+
+// Second Section
+
+.about-second {
+  margin: 50px 0 0 0;
+  padding: 40px;
+  .about-blockMain {
+    .about-head {
+      text-align: center;
+
+      .about-head-title {
+        font-style: normal;
+        background: linear-gradient(to right, #BF953F, #FCF6BA, #838728, #FBF5B7, #AA771C);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: lora;
+        font-weight: 600;
+        font-size: 36px;
+      }
+    }
+
+    .about-desc-manager {
+      text-align: center;
+    }
+
+  }
+
+}
+
+// Third Section
+
+.about-third {
+  margin: 0 0;
+  padding: 40px;
+  .about-blockMain {
+    .about-head {
+      text-align: center;
+
+      .about-head-title {
+        font-style: normal;
+        background: linear-gradient(to right, #BF953F, #FCF6BA, #838728, #FBF5B7, #AA771C);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: lora;
+        font-weight: 600;
+        font-size: 36px;
+      }
+    }
+
+    .header-text {
+      font-size: 30px;
+      font-family: lora;
+      font-weight: 500;
+    }
+
+    .splited-block {
+      .img-cover {
+        .img-block {}
+      }
+
+      .text-block {
+        .text-desc {
+          font-size: 16px;
+
+          .font-highlight {
+            font-family: "Gabriela", serif;
+            font-size: 22px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:500px) {
+  .about {
+    .about-block {
+      .about-titlemain {
+        padding: 20px 0 10px 0;
+
+        .about-title {
+          font-size: 25px;
+        }
+      }
+
+      .about-desc-block {
+        .about-desc {
+          .about-main {
+            .about-mainTitle {
+              font-size: 18px;
+            }
+
+            .about-mainImportant {
+              .about-desc-main {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about-second {
+    margin: 20px 0 0 0;
+    padding: 5px;
+
+    .about-blockMain {
+      .about-desc-manager {
+        text-align: justify;
+      }
+
+      .about-head {
+        .about-head-title {
+          font-size: 20px;
+          letter-spacing: initial;
+          text-transform: none !important;
+          font-family: Lora, serif !important;
+          margin-bottom: 0;
+          text-align: center;
+        }
+      }
+
+      .about-desc-manager {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .about-third {
+    margin: 5px 0 0 0;
+    padding: 5px;
+
+    .about-blockMain {
+      .about-desc-manager {
+        text-align: justify;
+      }
+
+      .about-head {
+        .about-head-title {
+          font-size: 20px;
+          letter-spacing: initial;
+          text-transform: none !important;
+          font-family: Lora, serif !important;
+          margin-bottom: 0;
+          text-align: center;
+        }
+      }
+
+      .about-desc-manager {
+        margin-bottom: 0;
+      }
+
+      .header-text {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .text-block {
+      .text-desc {
+        .font-highlight {
+          font-size: 16px !important;
+          font-weight: 600 !important;
+        }
+      }
+    }
+  }
+
+}
+
+.gap-20 {
+  row-gap: 20px;
+}

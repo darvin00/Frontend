@@ -1,0 +1,74 @@
+<div class="container mt-4">
+  <h2 class="text-center">Manage Offers</h2>
+
+  <!-- Create New Offer Form -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h3>Create New Offer</h3>
+    </div>
+    <div class="card-body">
+      <form (submit)="createOffer()">
+        <div class="form-group">
+          <label for="productId">Product ID</label>
+          <input type="number" id="productId" [(ngModel)]="newOffer.productId" name="productId" class="form-control"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="offerDescription">Description</label>
+          <input type="text" id="offerDescription" [(ngModel)]="newOffer.offerDescription" name="description"
+            class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="timeRemaining">Duration (hours)</label>
+          <input type="number" id="timeRemaining" [(ngModel)]="newOffer.timeRemaining" name="duration"
+            class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Offer</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Edit Offer Form -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h3>Edit Offer</h3>
+    </div>
+    <div class="card-body">
+      <form (submit)="updateOffer()">
+        <div class="form-group">
+          <label for="editDescription">Description</label>
+          <input type="text" id="editDescription" [(ngModel)]="editOfferData.offerDescription" name="editDescription"
+            class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="editDuration">Duration (hours)</label>
+          <input type="number" id="editDuration" [(ngModel)]="editOfferData.timeRemaining" name="editDuration"
+            class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-warning" [disabled]="!editOfferData.id">Update Offer</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- All Offers List -->
+  <div class="card">
+    <div class="card-header">
+      <h3>All Offers</h3>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li *ngFor="let offer of offers" class="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            <strong>Product ID:</strong> {{ offer.productId }} |
+            <strong>Description:</strong> {{ offer.offerDescription }} |
+            <strong>Duration:</strong> {{ offer.timeRemaining }} hrs
+          </div>
+          <div>
+            <button class="btn btn-info btn-sm" (click)="selectOfferToEdit(offer)">Edit</button>
+            <button class="btn btn-danger btn-sm ml-2" (click)="deleteOffer(offer.id)">Delete</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

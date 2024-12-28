@@ -1,0 +1,68 @@
+<div class="pick-product">
+  <div class="container-fluid">
+    <div class="container pickProduct-overview-Block">
+      <div class="trending-main">
+        <div class="trending-title">
+          <h3 class="header-3">Top Picks You Can't Miss</h3>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="products.length > 0; else noProducts">
+        <div class="col-lg-3 col-sm-6 col-md-6 mb-4" *ngFor="let product of getDisplayedProducts()">
+          <div class="card">
+            <img [src]="hoveredImage[product.id] || product.thumbnail || 'assets/images/alternative-image.jpg'"
+                    class="card-img-top"
+                    alt="Product Image"
+                    (click)="buyNow(product)"
+                    (mouseenter)="onMouseEnter(product)"
+                    (mouseleave)="onMouseLeave(product)"
+                    (touchstart)="onTouchStart(product)"
+                    (touchend)="onTouchEnd(product)"
+                    (error)="onImageError($event)">
+            <i class="fa-heart position-absolute top-0 right-0 m-3"
+              [ngClass]="{ 'fas': product.isFavorite, 'far': !product.isFavorite }" [class.text-danger]="product.isFavorite"
+              (click)="toggleFavorite(product)">
+            </i>
+            <div class="card-body">
+              <p class="card-title">{{ product.name }}</p>
+              <div class="product-rating">
+                <i *ngFor="let star of [1, 2, 3, 4, 5]; let i = index" [class]="getStarClass(i, product.averageRating)"></i>
+                   <span class="txt-rate">(Rating: {{ (product.averageRating || 0) | number:'1.1-1' }} / 5)</span>
+
+              </div>
+              <p class="card-benefit benefit-reg" style="height: 36px;">{{ product.benefit }}</p>
+              <p class="card-text">
+                <small class="text-muted"><b>MRP: </b> <del>{{ product.mrp | currency:'INR' }}</del></small>
+              </p>
+              <p class="card-price">₹{{ product.price }}</p>
+              <div>
+                <button class="card-btn" (click)="addToCart(product)" [disabled]="isProductAdding[product.id]">
+                  <!-- Show "Adding..." if the product is being added -->
+                  <ng-container *ngIf="isProductAdding[product.id]">Adding...</ng-container>
+
+                  <!-- Show "Added Successfully" if the product was added, otherwise show "Add to Cart" -->
+                  <ng-container *ngIf="!isProductAdding[product.id]">
+                    {{ isProductAdded[product.id] ? 'Added Successfully' : 'Add to Cart' }}
+                  </ng-container>
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-2">
+        <button class="pickView-btn" routerLink="/shine/shineproducts">
+         View More Products
+        </button>
+      </div>
+
+      <ng-template #noProducts>
+        <p>No products available.</p>
+      </ng-template>
+    </div>
+
+  </div>
+
+</div>

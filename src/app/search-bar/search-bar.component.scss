@@ -1,0 +1,29 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 250px;
+    border-radius: 25px;
+    border: 1px solid black;
+
+}
+
+.search-bar img {
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+}
+@media (max-width: 425px) {
+.search-bar input {
+       position: absolute;
+       right: 0;
+    }
+
+}

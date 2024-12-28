@@ -1,0 +1,6 @@
+<div class="image-container" (mousedown)="startRotation($event)" (mousemove)="rotateImage($event)"
+  (mouseup)="stopRotation()" (mouseleave)="stopRotation()" (touchstart)="startRotation($event)"
+  (touchmove)="rotateImage($event)" (touchend)="stopRotation()">
+
+  <img [src]="images[currentIndex]" alt="360 view image" id="product-image">
+</div>

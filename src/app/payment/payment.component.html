@@ -1,0 +1,186 @@
+<!-- NEW Code -->
+<div class="back-button-container">
+    <button class="btn btn-secondary back-button" (click)="goBack()">
+        <i class="fas fa-arrow-left"></i> <span class="back-text">Back</span>
+    </button>
+</div>
+
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="card-block">
+            <div class="card-title">
+                <p class="header-1">Payment Details</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8" *ngFor="let product of products">
+                    <div class="">
+                        <div class="card-Overall">
+                            <div class="card-cart">
+                                <div class="card-split">
+                                    <div class="card-left">
+                                        <div class="catdProduct-img">
+                                            <img src="{{ product.thumbnail }}"
+                                                class="img-fluid rounded-start w-100" alt="Product Image" />
+                                        </div>
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-productBlock">
+                                            <div class="card-product">
+                                                <p class="card-title">{{ product.name }}</p>
+                                                <p class="card-text">
+                                                    {{ product.size }}
+                                                </p>
+                                                <!-- <p class="card-text">
+                          <span>Suitable for : </span>{{ product.suitable }}
+                        </p> -->
+                                            </div>
+                                            <div class="overall-desc">
+                                                <div class="spc-quality">
+                                                    <p><span>Quantity : </span> {{ product.quantity }}</p>
+                                                </div>
+                                                <div class="Block">
+                                                    <span class="home-badge"> Home Delivery </span>
+                                                </div>
+                                                <div class="mrp-block">
+                                                    <p class="mrp-style">
+                                                        MRP :
+                                                        <span> {{ product.mrp | currency : "INR" }} </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-border-down">
+                                                <div class="text-center">
+                                                    <p class="card-text">
+                                                        <span>Special Price : </span>
+                                                        {{ product.price | currency : "INR" }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-split-right">
+                        <div class="card-Overall">
+                            <div class="card-cart">
+                                <div class="final-checkout">
+                                    <div class="home-block">Home Delivery</div>
+                                    <hr />
+                                    <div class="prize-total-block">
+                                        <div class="subtotal-block">
+                                            <div class="subtotal">
+                                                <p>Subtotal :</p>
+                                            </div>
+                                            <div class="total-prize">
+                                                <p>{{ totalAmount | currency : "INR" }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="delivery-block">
+                                            <div class="delivery">
+                                                <p>Delivery</p>
+                                            </div>
+                                            <div class="total-prize">
+                                                <p>₹20</p>
+                                            </div>
+                                        </div>
+                                        <hr class="hr-1" />
+                                        <div class="final-block">
+                                            <div>
+                                                <p class="final-total">Total :</p>
+                                            </div>
+                                            <div>
+                                                <p class="total-inr">
+                                                    {{ totalAmount | currency : "INR" }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr class="hr-2" />
+                                    </div>
+                                    <div class="checkout-btn">
+                                        <button class="btn btn-block" (click)="onProceedToPay()" [disabled]="isProcessing">
+                                            {{ isProcessing ? 'Processing...' : 'Proceed to Pay' }}
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END Code -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <h5 class="text-center mt-4">Payment Details</h5> -->
+
+<!-- Loop through all products -->
+<!-- <div *ngFor="let product of products" class="card mb-3">
+        <div class="row g-0">
+            <div class="col-12 col-md-4 position-relative">
+                <img src="{{ product.thumbnail}}" class="img-fluid rounded-start w-100" alt="Product Image">
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.size }}</p>
+                    <p class="card-text">
+                        <small class="text-muted">MRP: <del>{{ product.mrp | currency:'INR' }}</del></small>
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted">Discount: {{ product.discount }}%</small>
+                    </p>
+                    <p class="card-text">
+                        <strong>Quantity:</strong> {{ product.quantity }}
+                    </p>
+                    <h5 class="card-text">Price: {{ product.price | currency:'INR' }}</h5>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<!-- Display the selected address -->
+<!-- <div *ngIf="selectedAddress" class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ selectedAddress.name }}
+                <span class="badge badge-secondary">{{ selectedAddress.type }}</span>
+            </h5>
+            <p class="card-text">{{ selectedAddress.phone }}</p>
+            <p class="card-text">{{ selectedAddress.addressLine1 }}, {{ selectedAddress.addressLine2 }}</p>
+            <p class="card-text">{{ selectedAddress.city }}, {{ selectedAddress.state }} - {{ selectedAddress.zip }}</p>
+        </div>
+    </div> -->
+
+<!-- Display the total amount to be paid -->
+<!-- <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Amount to be Paid</h5>
+            <p class="card-text">₹{{ totalAmount | number:'1.2-2' }}</p>
+        </div>
+    </div>
+
+    <button class="btn btn-primary btn-block" (click)="onProceedToPay()">Proceed to Pay</button>
+</div> -->

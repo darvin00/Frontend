@@ -1,0 +1,24 @@
+.d-flex {
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+aside {
+    height: 100vh; // Sidebar height to take full viewport height
+}
+
+.bg-light {
+    background-color: #f8f9fa; // Light background for main content
+}
+
+.hover\:bg-light:hover {
+    background-color: #e2e6ea; // Light hover effect
+}
+
+ul {
+    padding-left: 0; // Reset padding for the list
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,83 @@
+.cancellation-refund-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.cancellation-refund-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin-bottom: 30px;
+}
+
+.cancellation-refund-content {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+  line-height: 1.6;
+  font-size: 16px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #2d2d2d;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  strong {
+    font-weight: 700;
+    color: #333;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #555;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .cancellation-refund-container {
+    padding: 15px;
+  }
+
+  .cancellation-refund-title {
+    font-size: 28px;
+  }
+
+  .cancellation-refund-content {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cancellation-refund-container {
+    padding: 10px;
+  }
+
+  .cancellation-refund-title {
+    font-size: 24px;
+  }
+
+  .cancellation-refund-content {
+    font-size: 14px;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  background-color: #0056
+}

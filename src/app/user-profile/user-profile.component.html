@@ -1,0 +1,110 @@
+<div class="modal fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container" *ngIf="user">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3 col-sm-12">
+                            <div class="user-profile card mt-4">
+                                <div class="buttonclose">
+                                    <button type="button" data-bs-dismiss="modal" class="btn-close"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div *ngIf="!editMode">
+                                    <div class="card-body text-center card-profile">
+                                        <div class="user-avatar mb-3" *ngIf="userProfile?.avatarUrl">
+                                            <img [src]="'data:image/png;base64,'+userProfile.avatarUrl" alt=""
+                                                class="rounded-circle img-fluid">
+                                        </div>
+                                        <div class="profile-details">
+                                            <p class="heading" *ngIf="userProfile?.name">
+                                                <span><i class="bi bi-person"></i></span>{{ userProfile.name }}
+                                            </p>
+
+                                            <p class="detail mail" *ngIf="userProfile?.email">
+                                                <span><i class="bi bi-envelope"></i></span>
+                                                <span class="mail-txt">{{ userProfile.email }}</span>
+                                            </p>
+
+                                            <p class="detail" *ngIf="userProfile?.mobileNumber">
+                                                <span><i class="bi bi-phone"></i></span> {{ userProfile.mobileNumber }}
+                                            </p>
+
+                                            <p class="detail" *ngIf="userProfile?.dob">
+                                                <span><i class="bi bi-calendar-heart"></i></span> {{ userProfile.dob }}
+                                            </p>
+
+                                            <p class="detail detail-gender" *ngIf="userProfile?.gender">
+                                                <span *ngIf="userProfile?.gender === 'male'">
+                                                    <i class="bi bi-gender-male"></i>
+                                                </span>
+                                                <span *ngIf="userProfile?.gender === 'female'">
+                                                    <i class="bi bi-gender-female"></i>
+                                                </span>
+                                                {{ userProfile?.gender }}
+                                            </p>
+
+                                            <div class="buttonsplit">
+                                                <button class="btn btn-common d-flex gap-2" (click)="enableEdit()">
+                                                    <span><i class="bi bi-pencil-square"></i></span>Edit
+                                                </button>
+                                                <button class="btn btn-secondary mt-1 d-flex gap-2" (click)="signOut()">
+                                                    <span><i class="bi bi-box-arrow-left"></i></span>Sign Out
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="editMode" class="edit-profile">
+                                    <form [formGroup]="profileForm" (ngSubmit)="updateProfile()"
+                                        enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input formControlName="name" type="text" id="name" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input formControlName="email" type="email" id="email" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="mobileNumber">Mobile Number</label>
+                                            <input formControlName="mobileNumber" type="text" id="mobileNumber"
+                                                class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="dob">Date of Birth</label>
+                                            <input formControlName="dob" type="date" id="dob" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="gender">Gender</label>
+                                            <select formControlName="gender" id="gender" class="form-control">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="avatar">Avatar</label>
+                                            <input type="file" (change)="onFileSelected($event)" class="form-control"
+                                                id="avatar">
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <button type="submit" class="btn btn-primary"
+                                                [disabled]="profileForm.invalid">Update Profile</button>
+                                            <button type="button" class="btn btn-secondary"
+                                                (click)="cancelEdit()">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

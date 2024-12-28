@@ -1,0 +1,149 @@
+.cardBlock {
+  padding-bottom: 50px;
+
+  .product-head {
+    color: #000;
+    text-align: center;
+    font-size: 32px !important;
+    font-style: normal;
+    line-height: normal;
+    text-transform: capitalize !important;
+
+    h3 {
+      letter-spacing: initial;
+      text-transform: none !important;
+      font-family: Lora, serif !important;
+      margin-bottom: 0;
+    }
+
+    .header-3 {
+      padding: 50px 0 30px 0;
+    }
+  }
+
+  .container-wrapper {
+    position: relative;
+    margin: 0 20px;
+
+    .prev-btn,
+    .next-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50px;
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+  }
+
+  .card-container {
+    display: flex;
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  .product-list {
+    display: flex;
+    flex: 1;
+    white-space: nowrap;
+    animation: scroll-left 40s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    .product-card {
+      display: inline-block;
+      border-radius: 8px;
+      text-align: center;
+      flex: 0 0 auto;
+      width: 300px;
+      margin: 0 10px;
+
+      .product-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+      }
+
+      .product-title {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+
+      button {
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        padding: 0;
+      }
+    }
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cardBlock {
+    padding-bottom: 10px;
+
+    .product-head {
+      .header-3 {
+        padding: 20px;
+        font-size: 20px;
+      }
+    }
+
+    .product-list {
+      .product-card {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .card-container {
+    display: flex;
+    overflow: hidden;
+    /* Hide the overflow to prevent scrolling */
+    position: relative;
+  }
+
+  .product-list {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition */
+    touch-action: pan-x;
+    /* Allow horizontal panning */
+  }
+
+  .product-card {
+    flex: 0 0 100%;
+    /* Each card takes up 100% of the screen width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

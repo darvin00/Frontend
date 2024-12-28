@@ -1,0 +1,156 @@
+.special-block {
+  padding-bottom: 50px;
+
+  .special-main {
+    .special-title {
+      color: #000;
+      text-align: center;
+      font-size: 32px !important;
+      font-style: normal;
+      line-height: normal;
+      text-transform: capitalize !important;
+
+      h3 {
+        letter-spacing: initial;
+        text-transform: none !important;
+        font-family: Lora, serif !important;
+        margin-bottom: 0;
+      }
+
+      .header-3 {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+
+.card-block {
+  position: relative;
+
+  .card-img {
+    img {
+      border-radius: 28px;
+      object-fit: cover;
+    }
+  }
+
+  .special-offers {
+    position: absolute;
+    background: #f2f3f6;
+    top: 0px;
+    right: 0px;
+    padding: 8px 15px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 10px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .special-block {
+    .special-main {
+      .special-title {
+        font-size: 24px !important;
+
+        .header-3 {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .card-block {
+    .card-img {
+      img {
+        border-radius: 28px;
+      }
+    }
+  }
+}
+
+.special-left {
+  img {
+    border-radius: 48px;
+  }
+}
+
+.product-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgb(244, 245, 247);
+  background: linear-gradient(111deg, rgb(244, 245, 247) 0%, rgb(217, 220, 228) 57%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  .product-body-title {
+    .product-title {
+      margin: 0;
+      font-size: 16px;
+      font-family: Lora, serif !important;
+      text-transform: capitalize;
+    }
+  }
+
+  .product-prize {
+    .product-prize-rate {
+      margin-bottom: 0;
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .special-block {
+    padding-bottom: 20px;
+
+    .special-main {
+      .special-title {
+        .header-3 {
+          padding-bottom: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .special-left {
+      img {
+        border-radius: 10px;
+      }
+    }
+
+    .card-block {
+      .card-img {
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .card-block {
+      .special-offers {
+        padding: 4px 7px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        bottom: 0px !important;
+        border-top-left-radius: 10px;
+        top: unset;
+
+        p {
+          font-size: 10px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}

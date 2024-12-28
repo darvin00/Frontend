@@ -1,0 +1,39 @@
+<div class="cardBlock">
+  <div class="product-head">
+    <div class="product-head" *ngIf="filteredProducts && filteredProducts.length > 0">
+      <h3 class="header-3">Radiate Love and Elegance</h3>
+    </div>
+  </div>
+  <div class="container-wrapper">
+    <div class="container-fluid card-container"
+     (mousedown)="onDragStart($event)" (mouseup)="onDragEnd()"
+      (mouseleave)="onDragEnd()" (mousemove)="onDragMove($event)">
+      <div class="product-list" #productList>
+        <!-- Angular directive for dynamic cards -->
+        <div class="product-card" *ngFor="let product of filteredProducts" (click)="showCategoryProducts(product.category)">
+          <button>
+             <img [src]= "product.thumbnail || 'assets/images/alternative-image.jpg'"  alt="{{ product.title }}" (error)="onImageError($event)" class="product-image" />
+
+
+          </button>
+          <div (click)="showCategoryProducts(product.category)" class="product-body">
+            <div class="product-body-title">
+              <p class="product-title">{{ product.category }}</p>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate the cards for continuous scroll -->
+        <div class="product-card" *ngFor="let product of filteredProducts" (click)="showCategoryProducts(product.category)">
+          <button>
+            <img [src]= "product.thumbnail || 'assets/images/alternative-image.jpg'"  alt="{{ product.title }}" (error)="onImageError($event)" class="product-image" />
+          </button>
+          <div (click)="showCategoryProducts(product.category)" class="product-body">
+            <div class="product-body-title">
+              <p class="product-title">{{ product.category }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

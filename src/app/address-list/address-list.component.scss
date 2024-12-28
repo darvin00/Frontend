@@ -1,0 +1,103 @@
+.address-block{
+  .container {
+    margin-top: 20px;
+    .address-cover{
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      padding: 20px;
+      border-radius: 10px;
+      .address-title{
+        margin-bottom: 15px;
+        text-align: center;
+        p{
+          font-size: 20px;
+          font-family: "Gabriela", serif;
+          margin: 0;
+          font-weight: 700;
+          color: #1a1a1a;
+          margin-top: 0px;
+        }
+      }
+
+    }
+  }
+  .card{
+    border: 2px solid transparent !important;
+    &.border-primary{
+      border: 2px solid blue !important;
+      border-radius: 10px;
+    }
+    .card-body{
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 10px;
+      .dark{
+        font-family: lora;
+        color: #8a8a8a;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .home-badge{
+        padding: 5px 10px;
+        background-color: #f6f6f6;
+        border-radius: 4px;
+        width: fit-content;
+      }
+      .imform{
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+    }
+  }
+}
+
+
+
+.back-button-container {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.back-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  /* Icon color */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.back-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  /* Slight background on hover */
+  border-radius: 4px;
+}
+
+.back-text {
+  display: none;
+  /* Hide text by default */
+  margin-left: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.back-button:hover .back-text {
+  display: inline;
+  /* Show text on hover */
+}
+
+.back-button i {
+  font-size: 16px;
+}
+/* Add this to your CSS or SCSS file */
+@media (max-width: 767px) {
+  .back-button-container {
+    display: none;
+  }
+}

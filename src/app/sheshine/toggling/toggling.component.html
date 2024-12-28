@@ -1,0 +1,26 @@
+
+
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+  <div class="container" [ngClass]="{'active': !isLogin}">
+    <!-- Display the Login or Signup form based on the isLogin flag -->
+    <app-login style="width: 100%;" *ngIf="isLogin"></app-login>
+    <app-signup *ngIf="!isLogin" (toggleLogin)="onToggleLogin($event)"></app-signup>
+
+    <!-- Toggle container to switch between Login and Signup -->
+    <div class="toggle-container" [ngClass]="{'active': !isLogin}">
+      <div class="toggle">
+        <div class="toggle-panel fa-toggle-left" *ngIf="isLogin">
+          <h1>Welcome Back!</h1>
+          <p>Login to Explore and Access All Products</p>
+          <button (click)="toggle()">Sign Up</button>
+        </div>
+
+        <div class="toggle-panel fa-toggle-right" *ngIf="!isLogin">
+          <h1>Hello, Friend!</h1>
+          <p>Create account, explore unlimited features</p>
+          <button (click)="toggle()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

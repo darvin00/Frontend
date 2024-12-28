@@ -1,0 +1,144 @@
+<div class="review-mainBlock container-fluid py-4">
+  <!-- Review Section -->
+  <div class="review-section">
+      <!-- Header Section -->
+      <div class="review-headerBlock text-center mb-4">
+          <h3 class="review-header fw-bold">Leave a Review for This Product</h3>
+          <p class="review-desc text-muted">
+              We’d love your feedback! Share your experience with our product to help
+              others make informed decisions. Your insights are valuable and help us
+              improve our offerings.
+          </p>
+      </div>
+
+      <!-- Review Input Section -->
+      <div class="review-areaBlock">
+          <div class="review-overAll p-3 shadow-sm rounded bg-light">
+              <div class="review-areaHead mb-3">
+                  <p class="fs-5 fw-semibold">Tell Us Your Thoughts</p>
+              </div>
+              <div class="mb-3">
+                  <!-- Star Rating -->
+                  <div class="star-rating mb-3">
+                      <label for="" class="form-label">Rating</label>
+                      <span
+                          *ngFor="let star of getStarArray(5); let i = index"
+                          (click)="setRating(i + 1)"
+                          class="star fs-4"
+                          [class.filled]="i < newReview.rating"
+                      >
+                          ★
+                      </span>
+                  </div>
+                  <!-- Comment Textarea -->
+                  <textarea
+                      [(ngModel)]="newReview.comment"
+                      placeholder="Write your comment..."
+                      class="form-control"
+                      rows="3"
+                      required
+                  ></textarea>
+              </div>
+              <div class="text-end">
+                  <button
+                      class="btn btn-primary mt-2"
+                      (click)="submitReview()"
+                      [disabled]="isSubmittingReview"
+                  >
+                      {{ isSubmittingReview ? 'Submitting...' : 'Submit Review' }}
+                  </button>
+              </div>
+          </div>
+      </div>
+
+      <!-- Reviews Display Section -->
+      <div class="over-allreview-update mt-5">
+          <div class="reviews-section">
+              <!-- Section Header -->
+              <div class="review-allReviewHead text-center mb-4">
+                  <p class="fs-4 fw-bold">Hear from Our Happy Buyers</p>
+              </div>
+
+              <!-- Alerts -->
+              <div *ngIf="!isEligibleToReview" class="alert alert-warning text-center">
+                  {{ eligibilityMessage }}
+              </div>
+              <div *ngIf="successMessage" class="alert alert-success text-center">
+                  {{ successMessage }}
+              </div>
+
+              <!-- Reviews List -->
+              <div class="overall-reviewBlockMain row">
+                  <div
+                      class="overall-reviewBlock col-md-6 col-lg-4 mb-4"
+                      *ngFor="let review of reviews"
+                  >
+                      <div class="p-3 shadow-sm rounded bg-white h-100">
+                          <!-- Reviewer Info -->
+                          <div class="d-flex align-items-center mb-3">
+                              <div class="profile-img me-3">
+                                  <img
+                                      [src]="'data:image/png;base64,' + review.userAvatar"
+                                      alt="Profile Image"
+                                      class="rounded-circle"
+                                      width="50"
+                                      height="50"
+                                  />
+                              </div>
+                              <div>
+                                  <p class="mb-1 fw-semibold">{{ review.userName }}</p>
+                                  <p class="mb-0 text-warning">
+                                      <span
+                                          *ngFor="let star of getStarArray(review.rating)"
+                                      >
+                                          ★
+                                      </span>
+                                  </p>
+                              </div>
+                          </div>
+
+                          <!-- Review Content -->
+                          <div class="review">
+                              <p *ngIf="editingReviewId !== review.id">
+                                  {{ review.comment }}
+                              </p>
+                              <textarea
+                                  *ngIf="editingReviewId === review.id"
+                                  [(ngModel)]="editedReview.comment"
+                                  placeholder="Edit Comment"
+                                  class="form-control"
+                                  rows="2"
+                                  required
+                              ></textarea>
+                          </div>
+
+                          <!-- Action Buttons -->
+                          <div class="d-flex justify-content-end mt-3">
+                              <button
+                                  *ngIf="review.userid === userId && editingReviewId !== review.id"
+                                  class="btn btn-sm btn-secondary me-2"
+                                  (click)="startEditing(review)"
+                              >
+                                  Edit
+                              </button>
+                              <button
+                                  *ngIf="editingReviewId === review.id"
+                                  class="btn btn-sm btn-success me-2"
+                                  (click)="submitEditedReview()"
+                              >
+                                  {{ isSubmittingEdit ? 'Submitting...' : 'Submit Edit' }}
+                              </button>
+                              <button
+                                  *ngIf="review.userid === userId && editingReviewId !== review.id"
+                                  class="btn btn-sm btn-danger"
+                                  (click)="deleteReview(review.id)"
+                              >
+                                  {{ isDeleting ? 'Deleting...' : 'Delete' }}
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>

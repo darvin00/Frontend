@@ -1,0 +1,54 @@
+.review-list-container {
+    margin: 20px; // Container margin for spacing
+
+    .title {
+        font-size: 24px; // Title font size
+        margin-bottom: 15px; // Space below the title
+        text-align: center; // Center align title
+    }
+
+    .table-responsive {
+        overflow-x: auto; // Allow horizontal scrolling on smaller screens
+
+        table {
+            width: 100%; // Full width table
+            border-collapse: collapse; // Collapse borders for a clean look
+            margin-top: 20px; // Space above the table
+
+            thead {
+                background-color: #343a40; // Dark background for header
+                color: white; // White text for header
+
+                th {
+                    padding: 12px; // Padding for header cells
+                    text-align: left; // Left-align text in header
+                    font-weight: bold; // Bold text
+                }
+            }
+
+            tbody {
+                tr {
+                    &:nth-child(even) {
+                        background-color: #f2f2f2; // Light grey for even rows
+                    }
+
+                    &:hover {
+                        background-color: #e0e0e0; // Highlight row on hover
+                    }
+                }
+
+                td {
+                    padding: 12px; // Padding for table cells
+                    text-align: left; // Left-align text in cells
+
+                    img.avatar {
+                        width: 50px; // Width for avatar images
+                        height: 50px; // Height for avatar images
+                        border-radius: 50%; // Circular avatars
+                        object-fit: cover; // Ensures the image covers the container properly
+                    }
+                }
+            }
+        }
+    }
+}

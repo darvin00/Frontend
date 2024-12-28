@@ -1,0 +1,9 @@
+<div class="container">
+<div *ngIf="verificationMessage === ''" @fadeInOut>
+    <p>Verifying your account...</p>
+    <div class="spinner"></div>
+</div>
+    <div *ngIf="verificationMessage !== ''">
+        <p>{{ verificationMessage }}</p>
+    </div>
+</div>

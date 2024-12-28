@@ -1,0 +1,26 @@
+.flash-offer {
+    padding: 15px 25px;
+    margin: 20px auto;
+    background-color: #ffd54f;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: pulse 1s infinite;
+
+    // Optional pulse animation for added effect
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+    }
+}

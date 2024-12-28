@@ -1,0 +1,33 @@
+<div class="container d-flex align-items-center justify-content-center vh-100">
+  <div class="card shadow" style="width: 400px;">
+    <div class="card-body p-4">
+      <h5 class="card-title text-center mb-4">Login</h5>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <input type="email" formControlName="email" placeholder="Email" aria-label="Email"
+            aria-describedby="emailError" class="form-control" />
+          <div id="emailError"
+            *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)">
+            <small class="text-danger" *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</small>
+            <small class="text-danger" *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email format.</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <input type="password" formControlName="password" placeholder="Password" aria-label="Password"
+            aria-describedby="passwordError" class="form-control" />
+          <div id="passwordError"
+            *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)">
+            <small class="text-danger" *ngIf="loginForm.get('password')?.errors?.['required']">Password is
+              required.</small>
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary w-100"
+          (click)="animateButton($event)">
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

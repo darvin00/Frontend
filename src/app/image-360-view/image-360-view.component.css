@@ -1,0 +1,13 @@
+.image-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}

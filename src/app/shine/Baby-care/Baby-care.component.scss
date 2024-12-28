@@ -1,0 +1,302 @@
+.product-overview-Block {
+    .card {
+        border: unset;
+        // .card-img-top{
+        //   width: 300px;
+        //   height: 300px;
+        //   object-fit: cover;
+        // }
+
+        .card-body {
+            padding: 5px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .card-text {
+                margin-bottom: 0;
+            }
+
+            .card-price {
+                margin-bottom: 0;
+            }
+
+            .card-text {
+                .text-muted {
+                    font-family: Lora, serif;
+                }
+            }
+
+        }
+
+        .card-btn {
+            background: rgb(244, 245, 247);
+            background: linear-gradient(111deg, rgb(244, 245, 247) 0%, rgb(217, 220, 228) 57%);
+            border: unset;
+            padding: 10px;
+            transition: 0.3s;
+
+            &:hover {
+                background: green;
+                color: #fff;
+            }
+        }
+
+        .card-title {
+            color: #000;
+            font-family: Lora, serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            // height: 48px;
+            margin-bottom: 0;
+            text-transform: capitalize;
+        }
+    }
+
+    .card-benefit {
+        margin-bottom: 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        &.benefit-reg {
+            color: #8a8a8a;
+            font-family: Nimbus Sans L;
+            font-size: 14.5px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 132.4%;
+        }
+    }
+
+    .card-size {
+        margin-bottom: 0;
+    }
+
+    .card-price {}
+}
+
+.product-rating {
+    margin-top: 1em;
+    color: #f3c012;
+    margin-top: 0;
+    font-size: 12px;
+
+    .txt-rate {
+        color: #8a8a8a;
+    }
+}
+
+.product-rating {
+    font-size: 9px;
+    line-height: 1.5;
+
+    span {
+        font-size: 12px;
+        display: flex;
+        gap: 3px;
+    }
+
+    .txt-rate {
+        font-size: 12px;
+    }
+}
+
+.fa-star-o {
+    &:before {
+        content: "\f005";
+        color: #dddddd;
+    }
+}
+
+.card-btn {
+    width: 100%;
+    // padding: 5px;
+    border-radius: 5px;
+    outline: unset;
+    border: 1px solid;
+}
+
+@media (max-width:500px) {
+    .product-overview-Block {
+        .col-sm-6 {
+            flex: 0 0 auto;
+            width: 50%;
+            padding: 0 5px 0px 8px;
+        }
+
+        .card {
+            .product-rating {
+                .fa-star {
+                    &.far {
+                        font-size: 12px;
+                    }
+
+                    &.fas {
+                        font-size: 12px;
+                    }
+                }
+
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            .card-body {
+                .card-title {
+                    font-size: 14px;
+                }
+
+                .card-benefit {
+                    font-size: 13px;
+                }
+
+                .text-muted {
+                    font-size: 13px;
+                }
+
+                .card-price {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .product-overview-Block {
+        .col-sm-6 {
+            flex: 0 0 auto;
+            width: 50%;
+            padding: 0 5px 0px 8px;
+        }
+
+        .card {
+            .product-rating {
+                display: none;
+            }
+
+            .benefit-reg {
+                display: none;
+            }
+
+            .card-text {
+                display: none;
+            }
+
+            .card-price {
+                display: none;
+            }
+
+            .pick-btn {
+                display: none;
+            }
+        }
+    }
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .product-overview-Block {
+        .card {
+            .card-title {
+                font-size: 14px;
+            }
+
+            // .card-body {
+            //   padding: 4px 8px;
+            // }
+            .product-rating {
+                font-size: 1rem;
+            }
+
+            .card-btn {
+                // padding: 4px;
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .product-overview-Block {
+        .card {
+            .card-title {
+                font-size: 15px;
+            }
+
+            // .card-body {
+            //   padding: 5px 9px;
+            // }
+            .product-rating {
+                font-size: 0.8rem;
+            }
+
+            .card-btn {
+                // padding: 5px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    .product-overview-Block {
+        .card {
+            .card-title {
+                font-size: 16px;
+            }
+
+            // .card-body {
+            //   padding: 5px 10px;
+            // }
+            .product-rating {
+                font-size: 0.8rem;
+            }
+
+            .card-btn {
+                // padding: 6px;
+            }
+        }
+    }
+}
+
+
+// Spinner Loader
+
+.spinner-load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+
+  &::after {
+      content: " ";
+      display: block;
+      width: 46px;
+      height: 46px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 5px solid #ccc;
+      border-color: #ccc transparent #ccc transparent;
+      animation: lds-dual-ring 1.2s linear infinite;
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}

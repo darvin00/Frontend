@@ -1,0 +1,130 @@
+<div class="back-button-container">
+    <button class="btn btn-secondary back-button" (click)="goBack()">
+        <i class="fas fa-arrow-left"></i> <span class="back-text">Back</span>
+    </button>
+</div>
+
+<div class="container-fluid"  *ngIf="!isLoading; else loading">
+    <div class="container">
+        <div class="card-block">
+            <div class="card-title">
+                <p class="header-1">Cart of KPM Super Shopee</p>
+            </div>
+
+            <!-- Check if cartItems is empty -->
+            <div *ngIf="cartItems.length === 0" class="text-center my-5">
+                <p class="no-products-message">No products added in cart.</p>
+            </div>
+
+            <!-- Show cart items if cartItems is not empty -->
+            <div *ngIf="cartItems.length > 0" class="row">
+                <div class="col-lg-8" *ngFor="let item of cartItems">
+                    <div class="card-Overall">
+                        <div class="card-cart">
+                            <div class="card-split">
+                                <div class="card-left">
+                                    <div class="catdProduct-img">
+                                        <img src="{{item.product.thumbnail}}" class="img-fluid rounded-start w-100"
+                                            alt="Product Image">
+                                    </div>
+                                </div>
+                                <div class="card-right">
+                                    <div class="card-productBlock">
+                                        <div class="card-product">
+                                            <p class="card-title">{{item.product.name}}</p>
+                                            <p class="card-text"><span>Suitable for : </span>{{ item.product.suitable }}
+                                            </p>
+                                        </div>
+                                        <div class="overall-desc">
+                                            <div class="overall-quality">
+                                                <div class="quality-block">
+                                                    <span>Quantity</span>
+                                                </div>
+                                                <div class="overall-groupBtn">
+                                                    <button class="minus" (click)="decreaseQuantity(item)"
+                                                        [disabled]="item.quantity <= 1">-</button>
+                                                    <div class="spc-quality">
+                                                        <p>{{ item.quantity }}</p>
+                                                    </div>
+                                                    <button class="plus" (click)="increaseQuantity(item)">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="Block">
+                                                <span class="home-badge">Home Delivery</span>
+                                            </div>
+                                            <div class="mrp-block">
+                                                <p class="mrp-style">MRP : <span>{{ item.product.mrp | currency: 'INR'
+                                                        }}</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="card-border-down">
+                                            <div class="text-center">
+                                                <p class="card-text"><span>Special Price : </span>{{ item.product.price
+                                                    | currency: 'INR' }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="closeBlock">
+                                <button class="btn btn-danger me-2 close-btn" (click)="removeFromCart(item)">x</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Summary Column -->
+                <div class="col-lg-4">
+                    <div class="card-split-right">
+                        <div class="card-Overall">
+                            <div class="card-cart">
+                                <div class="final-checkout">
+                                    <div class="home-block">Home Delivery</div>
+                                    <hr>
+                                    <div class="prize-total-block">
+                                        <div class="subtotal-block">
+                                            <div class="subtotal">
+                                                <p>Subtotal :</p>
+                                            </div>
+                                            <div class="total-prize">
+                                                <p>{{ totalAmount | currency: 'INR' }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="delivery-block">
+                                            <div class="delivery">
+                                                <p>Delivery</p>
+                                            </div>
+                                            <div class="total-prize">
+                                                <p>₹20</p>
+                                            </div>
+                                        </div>
+                                        <hr class="hr-1">
+                                        <div class="final-block">
+                                            <div>
+                                                <p class="final-total">Total : </p>
+                                            </div>
+                                            <div>
+                                                <p class="total-inr">{{ totalAmount | currency: 'INR' }}</p>
+                                            </div>
+                                        </div>
+                                        <hr class="hr-2">
+                                    </div>
+                                    <div class="checkout-btn">
+                                        <button class="btn" (click)="buyAll()">Checkout</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loading>
+    <div class="loader-container">
+      <div class="spinner-load" *ngIf="loading">
+        <div class="lds-dual-ring"></div>
+      </div>
+    </div>
+</ng-template>

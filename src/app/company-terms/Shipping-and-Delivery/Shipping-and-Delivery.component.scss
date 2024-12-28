@@ -1,0 +1,66 @@
+.shipping-delivery-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.shipping-delivery-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin-bottom: 30px;
+}
+
+.shipping-delivery-content {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+  line-height: 1.6;
+  font-size: 16px;
+
+  p {
+    margin: 10px 0;
+  }
+
+  strong {
+    font-weight: 700;
+    color: #333;
+  }
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .shipping-delivery-container {
+    padding: 15px;
+  }
+
+  .shipping-delivery-title {
+    font-size: 28px;
+  }
+
+  .shipping-delivery-content {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .shipping-delivery-container {
+    padding: 10px;
+  }
+
+  .shipping-delivery-title {
+    font-size: 24px;
+  }
+
+  .shipping-delivery-content {
+    font-size: 14px;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  background-color: #0056
+}

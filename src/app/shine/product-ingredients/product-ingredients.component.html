@@ -1,0 +1,24 @@
+<div class="container-fluid py-5 text-center">
+  <div class="row justify-content-center">
+    <div class="col-7 justify-content-center position-relative">
+      <h2 class="display-4">Our go-to starting point? Asking Why!</h2>
+      <p class="lead">We’re extremely curious people. We can only assume you too are curious when it comes to the world
+        of personal care, and rightfully so. That’s why we insist on addressing the ‘Whys’ you’d need to know before you
+        buy.</p>
+    </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+      <div class="carousel-card" *ngFor="let card of cards">
+        <div class="card h-100">
+          <div class="card-body">
+            <img [src]="card.image" [alt]="card.title" class="icon mb-3">
+            <h6 class="card-title">{{ card.title }}</h6>
+            <small class="card-text">{{ card.text }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

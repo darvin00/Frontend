@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="card-block">
+            <div class="card-title">
+                <p class="header-1">Orders of KPM Super Shopee</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8" *ngFor="let item of orders">
+
+                    <div class="">
+                        <div class="card-Overall">
+                            <div class="card-cart" 
+                            [routerLink]="['/orders', item.orderId]" 
+                            (click)="storeOrderId(item.orderId)">
+                                <div class="card-split" *ngFor="let orderItem of item.orderItems">
+                                    <div class="card-left">
+                                        <div class="catdProduct-img" *ngIf="orderItem.product">
+                                            <img [src]="orderItem.product.thumbnail"
+                                                class="img-fluid rounded-start w-100" alt="Product Image">
+                                        </div>
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-productBlock">
+                                            <div class="card-product">
+                                                <p class="card-title">{{ orderItem.product.name }}</p>
+                                                <p class="card-text"><span>Suitable for: </span>{{
+                                                    orderItem.product.suitable }}</p>
+                                            </div>
+                                            <div class="overall-desc">
+                                                <div class="spc-quality">
+                                                    <p><span>Quantity:</span> {{ orderItem.quantity }}</p>
+                                                </div>
+                                                <div class="Block">
+                                                    <span class="home-badge">Home Delivery</span>
+                                                </div>
+                                                <div class="mrp-block">
+                                                    <p class="mrp-style">MRP: <span>{{ orderItem.product.price |
+                                                            currency:'INR' }}</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="card-border-down">
+                                                <div class="text-center">
+                                                    <p class="card-text"><span>Total amount:</span> {{ orderItem.totalPrice|
+                                                        currency:'INR' }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

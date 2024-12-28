@@ -1,0 +1,45 @@
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end"  [ngClass]="{'navbar-hidden': !navbarVisible, 'navbar-show-top': !navbarOriginalPosition && navbarVisible}">
+        <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation" (click)="toggleNavbar()">
+            <span *ngIf="!isNavbarOpen" class="navbar-toggler-icon"></span>
+            <span *ngIf="isNavbarOpen" class="close-icon">&times;</span>
+        </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="shinehome" routerLinkActive="active" (click)="closeNavbar()">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="shineproducts" routerLinkActive="active"
+                    (click)="closeNavbar()">PRODUCTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="babycare" routerLinkActive="active" (click)="closeNavbar()">BABY
+                    CARE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="bodycare" routerLinkActive="active" (click)="closeNavbar()">BODY
+                    CARE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="facecare" routerLinkActive="active" (click)="closeNavbar()">FACE
+                    CARE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="haircare" routerLinkActive="active" (click)="closeNavbar()">HAIR
+                    CARE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="skincare" routerLinkActive="active" (click)="closeNavbar()">SKIN
+                    CARE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="newlaunches" routerLinkActive="active" (click)="closeNavbar()">NEW
+                    LAUNCHES</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

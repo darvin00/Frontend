@@ -1,0 +1,146 @@
+<div class="container my-5">
+  <div class="card shadow">
+    <div class="card-body">
+      <h2 class="text-center text-primary mb-4">Add New Address</h2>
+      <form (ngSubmit)="addAddress()" class="needs-validation" novalidate #form="ngForm">
+        <!-- Name and Type -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              [(ngModel)]="newAddress.name"
+              name="name"
+              placeholder="Enter your name"
+              required
+              #name="ngModel"
+              [ngClass]="{'is-invalid': name.invalid && name.touched}"
+            />
+            <div class="invalid-feedback">Please enter a name.</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="type" class="form-label fw-bold">Type</label>
+            <select
+              class="form-select"
+              id="type"
+              [(ngModel)]="newAddress.type"
+              name="type"
+              required
+              #type="ngModel"
+              [ngClass]="{'is-invalid': type.invalid && type.touched}"
+            >
+              <option value="" disabled>Select type</option>
+              <option value="Home">Home</option>
+              <option value="Work">Work</option>
+            </select>
+            <div class="invalid-feedback">Please select a type.</div>
+          </div>
+        </div>
+        <!-- Phone and Address Line 1 -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="phone" class="form-label fw-bold">Phone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              [(ngModel)]="newAddress.phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+              #phone="ngModel"
+              [ngClass]="{'is-invalid': phone.invalid && phone.touched}"
+              pattern="^[0-9]{10}$"
+            />
+            <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="addressLine1" class="form-label fw-bold">Address Line 1</label>
+            <input
+              type="text"
+              class="form-control"
+              id="addressLine1"
+              [(ngModel)]="newAddress.addressLine1"
+              name="addressLine1"
+              placeholder="Enter address line 1"
+              required
+              #addressLine1="ngModel"
+              [ngClass]="{'is-invalid': addressLine1.invalid && addressLine1.touched}"
+            />
+            <div class="invalid-feedback">Please enter address line 1.</div>
+          </div>
+        </div>
+        <!-- Address Line 2 and City -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="addressLine2" class="form-label fw-bold">Address Line 2</label>
+            <input
+              type="text"
+              class="form-control"
+              id="addressLine2"
+              [(ngModel)]="newAddress.addressLine2"
+              name="addressLine2"
+              placeholder="Enter address line 2"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="city" class="form-label fw-bold">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              [(ngModel)]="newAddress.city"
+              name="city"
+              placeholder="Enter your city"
+              required
+              #city="ngModel"
+              [ngClass]="{'is-invalid': city.invalid && city.touched}"
+            />
+            <div class="invalid-feedback">Please enter a city.</div>
+          </div>
+        </div>
+        <!-- State and ZIP -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="state" class="form-label fw-bold">State</label>
+            <input
+              type="text"
+              class="form-control"
+              id="state"
+              [(ngModel)]="newAddress.state"
+              name="state"
+              placeholder="Enter your state"
+              required
+              #state="ngModel"
+              [ngClass]="{'is-invalid': state.invalid && state.touched}"
+            />
+            <div class="invalid-feedback">Please enter a state.</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="zip" class="form-label fw-bold">ZIP</label>
+            <input
+              type="text"
+              class="form-control"
+              id="zip"
+              [(ngModel)]="newAddress.zip"
+              name="zip"
+              placeholder="Enter your ZIP code"
+              required
+              #zip="ngModel"
+              [ngClass]="{'is-invalid': zip.invalid && zip.touched}"
+              pattern="^[0-9]{6}$"
+              maxlength="6"
+            />
+            <div class="invalid-feedback">Please enter a valid 6-digit ZIP code.</div>
+          </div>
+        </div>
+        <!-- Save Button -->
+        <button class="btn btn-primary btn-block mt-4" type="submit" [disabled]="form.invalid">
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

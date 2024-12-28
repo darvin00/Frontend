@@ -1,0 +1,38 @@
+<div class="d-flex flex-column flex-md-row">
+  <!-- Sidebar -->
+  <aside class="bg-white shadow p-4" style="width: 100%; max-width: 16rem;">
+    <ul class="list-unstyled">
+      <li>
+        <a routerLink="overview" class="text-dark d-block py-2 px-3 rounded hover:bg-light">Overview</a>
+      </li>
+      <li>
+        <a routerLink="product" class="text-dark d-block py-2 px-3 rounded hover:bg-light">Sheshine product</a>
+      </li>
+      <li>
+        <a routerLink="shineproductadd" class="text-dark d-block py-2 px-3 rounded hover:bg-light">Shine product</a>
+      </li>
+
+
+      <li>
+        <a routerLink="order" class="text-dark d-block py-2 px-3 rounded hover:bg-light">Order Management</a>
+      </li>
+      <li>
+        <a routerLink="customer" class="text-dark d-block py-2 px-3 rounded hover:bg-light">Customer Management</a>
+      </li>
+      <li>
+        <a routerLink="report" class="text-dark d-block py-2 px-3 rounded hover:bg-light">Offer Mails</a>
+      </li>
+      <li>
+        <a routerLink="adminreview" class="text-dark d-block py-2 px-3 rounded hover:bg-light">Admin review</a>
+      </li>
+      <li>
+        <a (click)="logout()" class="text-dark d-block py-2 px-3 rounded hover:bg-light">Logout</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content Area -->
+  <div class="flex-grow-1 bg-light p-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>

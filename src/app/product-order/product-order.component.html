@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="product-detail" *ngIf="product">
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-12 col-md-4 position-relative">
+                <img src="{{ product.image }}" class="img-fluid rounded-start w-100" alt="Product Image">
+                <i class="fa-heart position-absolute top-0 end-0 m-3"
+                    [ngClass]="{'fas': isFavorite, 'far': !isFavorite}" [class.text-danger]="isFavorite"
+                    (click)="toggleFavorite(product)"></i>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">{{ product.keybenfit }}</p>
+                    <p class="card-text">{{ product.size }}</p>
+
+                    <p class="card-text">
+                        <small class="text-muted">MRP: <del>{{ product.mrp | currency:'INR' }}</del></small>
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted">Discount: {{ product.discount }}%</small>
+                    </p>
+                    <h5 class="card-text">Price: {{ product.price | currency:'INR' }}</h5>
+                    <button routerLink="/cart" class="btn btn-primary me-2" (click)="addToCart(product)">Add to Cart</button>
+                    <button class="btn btn-success" (click)="buyNow()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

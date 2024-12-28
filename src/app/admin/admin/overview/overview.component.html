@@ -1,0 +1,42 @@
+<div class="container overview-container">
+  <h1 class="text-center mb-4">Dashboard Overview</h1>
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+      <div class="metric card p-3 shadow">
+        <h2>Total Sales</h2>
+        <p class="metric-value">{{ metrics.totalSales | currency:'INR' }}</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+      <div class="metric card p-3 shadow">
+        <h2>Total Orders</h2>
+        <p class="metric-value">{{ metrics.totalOrders }}</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+      <div class="metric card p-3 shadow">
+        <h2>Total Products</h2>
+        <p class="metric-value">{{ metrics.totalProducts }}</p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+      <div class="metric card p-3 shadow">
+        <h2>Total Customers</h2>
+        <p class="metric-value">{{ metrics.totalCustomers }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="lowStockProducts.length > 0; else noProducts">
+    <h3 class="mt-5">Low Stock Products</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let product of lowStockProducts">
+        {{ product.name }} - {{ product.stockQuantity }} units left
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noProducts>
+    <p class="mt-5">No low stock products available.</p>
+  </ng-template>
+</div>

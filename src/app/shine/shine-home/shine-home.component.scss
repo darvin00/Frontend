@@ -1,0 +1,53 @@
+.hero-wrapper {
+  .container-fluid {
+    padding: 0;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .desc-para {
+      margin-bottom: 0;
+      font-size: 30px;
+      line-height: 1.2;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    span {
+      font-size: 25px;
+    }
+  }
+
+  .search {
+    width: 100%;
+  }
+}
+
+@media (max-width:500px) {
+  .hero-wrapper {
+    .hero-mar {
+      margin-bottom: 10px !important;
+    }
+
+    .heroImg-block {
+      text-align: center;
+
+      img {
+        width: 300px;
+      }
+    }
+
+    .hero-section {
+      .desc-para {
+        font-size: 16px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+}

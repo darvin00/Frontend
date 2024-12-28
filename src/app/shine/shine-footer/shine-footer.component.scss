@@ -1,0 +1,277 @@
+.footer {
+    color: #fff;
+    background: rgb(244, 245, 247);
+    background: #262525;
+    font-size: 14px;
+    position: relative;
+
+    .footer-top {
+        padding-top: 30px;
+    }
+
+    .footer-about {
+        .logo {
+            line-height: 1;
+            // margin-bottom: 25px;
+            width: 150px;
+        }
+    }
+
+    .kpmshopsilver {
+        font-family: "Gabriela", serif;
+        font-weight: 700;
+        font-style: normal;
+        background-color: #f6f6f6;
+        background: linear-gradient(-72deg, #dedede, #ffffff 16%, #dedede 21%, #ffffff 24%, #454545 27%, #dedede 36%, #ffffff 45%, #ffffff 60%, #dedede 72%, #ffffff 80%, #dedede 84%, #a1a1a1);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 20px;
+        white-space: nowrap;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
+
+    .kpmshopgold {
+        font-family: "Gabriela", serif;
+        font-weight: 700;
+        font-style: normal;
+        background: linear-gradient(to right, #BF953F, #FCF6BA, #838728, #FBF5B7, #AA771C);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 20px;
+        white-space: nowrap;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+.footer .footer-about .logo img {
+    max-height: 40px;
+    margin-right: 6px;
+}
+
+.logo img {
+    margin-top: 10px;
+}
+
+.footer .footer-about .logo span {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    /* font-family: var(--heading-font); */
+    color: #3e5055;
+}
+
+.footer .footer-about {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.footer .footer-about p {
+    font-size: 14px;
+    /* font-family: var(--heading-font); */
+}
+
+.footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, #3d4348, transparent 50%);
+    font-size: 16px;
+    color: color-mix(in srgb, #3d4348, transparent 30%);
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #388da8;
+    border-color: #388da8;
+}
+
+.footer h4 {
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+
+.footer .footer-links {
+    margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-links ul i {
+    padding-right: 2px;
+    font-size: 12px;
+    line-height: 0;
+}
+
+.footer .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+
+    a {
+        color: #fff;
+    }
+}
+
+.footer .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+.footer .footer-links ul a {
+    color: color-mix(in srgb, #3d4348, transparent 30%);
+    display: inline-block;
+    line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+    color: #388da8;
+}
+
+.footer .footer-contact p {
+    margin-bottom: 5px;
+}
+
+.footer .footer-newsletter .newsletter-form {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 6px 8px;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid rgb(205, 204, 204, 0.5);
+    display: flex;
+    background-color: var(--surface-color);
+    transition: 0.3s;
+}
+
+.footer .footer-newsletter .newsletter-form:focus-within {
+    border-color: linear-gradient(111deg, rgb(244, 245, 247) 0%, rgb(217, 220, 228) 57%);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email] {
+    border: 0;
+    padding: 4px 10px;
+    width: 100%;
+    background-color: var(--contrsast-color);
+    color: #3d4348;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+    outline: none;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit] {
+    border: 0;
+    font-size: 16px;
+    padding: 0 20px;
+    margin: -7px -9px -7px 0;
+    background: rgb(244, 245, 247);
+    background: linear-gradient(111deg, rgb(244, 245, 247) 0%, rgb(217, 220, 228) 57%);
+    color: #000;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+    background: rgb(244, 245, 247);
+    background: linear-gradient(111deg, rgb(244, 245, 247) 0%, rgb(217, 220, 228) 57%);
+}
+
+.footer .copyright {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid color-mix(in srgb, #3d4348, transparent 90%);
+}
+
+.footer .copyright p {
+    margin-bottom: 0;
+}
+
+.footer {
+    .credits {
+        margin-top: 6px;
+        font-size: 16px;
+
+        a {
+            color: #99015B !important;
+            text-decoration: unset;
+            font-weight: 700;
+            font-family: "Gabriela", serif;
+        }
+    }
+}
+
+ul {
+    li {
+        padding: 8px !important;
+
+        a {
+            text-decoration: unset;
+            transition: 0.7ms;
+            color: #fff;
+            font-size: 14px !important;
+            font-family: Lora, serif;
+
+            &:hover {
+                color: #99015B !important;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.social-block {
+    .social-group {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        a {
+            color: #fff;
+
+            .bi {
+                font-size: 25px;
+            }
+
+            &:hover {
+                color: #99015B !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+.nameofshope
+{
+  font-family: "Gabriela", serif;
+    font-weight: 700;
+    font-style: normal;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #838728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    white-space: nowrap;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+
+}

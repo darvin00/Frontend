@@ -1,0 +1,25 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end" [ngClass]="{'navbar-hidden': !navbarVisible, 'navbar-show-top': !navbarOriginalPosition && navbarVisible}"> 
+    <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation" (click)="toggleNavbar()">
+      <span *ngIf="!navbarOpen" class="navbar-toggler-icon"></span>
+      <span *ngIf="navbarOpen" class="close-icon">&times;</span> <!-- Close icon -->
+    </button>
+
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home" routerLinkActive="active" (click)="closeNavbar()">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="products" routerLinkActive="active" (click)="closeNavbar()">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contact" routerLinkActive="active" (click)="closeNavbar()">Contact</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

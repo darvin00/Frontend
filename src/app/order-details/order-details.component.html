@@ -1,0 +1,155 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="card-block">
+            <div class="card-title">
+                <p class="header-1">Orders of KPM Super Shopee</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" *ngIf="order">
+                    <!-- Loop through orders -->
+                    <div class="card-Overall" *ngFor="let orderItem of order.orderItems">
+                        <div class="card-cart">
+                            <div class="card-split">
+                                <div class="card-left">
+                                    <div class="catdProduct-img">
+                                        <img [src]="orderItem.product.thumbnail" class="img-fluid rounded-start w-100"
+                                            alt="Product Image">
+                                    </div>
+                                </div>
+                                <div class="card-right">
+                                    <div class="card-productBlock">
+                                        <div class="card-product">
+                                            <p class="card-title">{{ orderItem.product.name }}</p>
+                                            <p class="card-text"><span>Suitable for: </span>{{
+                                                orderItem.product.suitable }}</p>
+                                        </div>
+                                        <div class="overall-desc">
+                                            <div class="spc-quality">
+                                                <p><span>Quantity: </span>{{ orderItem.quantity }}</p>
+                                            </div>
+                                            <div class="Block">
+                                                <span class="home-badge">Home Delivery</span>
+                                            </div>
+                                            <div class="mrp-block">
+                                                <p class="mrp-style">MRP: <span>{{ orderItem.product.price |
+                                                        currency:'INR' }}</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="orderdate">
+                                            <div>
+                                                <p><b><span>Order date: </span></b>{{ order.orderDate }}</p>
+                                            </div>
+                                            <div>
+                                                <p><b><span>Expected delivery: </span></b>{{ order.deliveryDate }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="orderaddress">
+                                            <p><b><span>Address: </span></b><br>{{ order.address.name }}<br>
+                                                {{ order.address.addressLine1 }}<br>
+                                                {{ order.address.addressLine2 ? order.address.addressLine2 + ', ' : ''
+                                                }}
+                                                {{ order.address.city }}, {{ order.address.state }}, {{
+                                                order.address.zip }}
+                                            </p>
+                                        </div >
+                                        <div class="card-border-down">
+                                            <div class="orderstatus">
+                                                <div>
+                                                    <p><b><span>Order status: </span></b>{{ order.orderStatus }}</p>
+                                                </div>
+                                                <div>
+                                                  <p>
+                                                    <b><span>Payment Status: </span></b>
+                                                    <span [ngClass]="{
+                                                      'paid': order.paymentStatus === 'PAID',
+                                                      'not-paid': order.paymentStatus === 'NOT PAID',
+                                                      'refunded': order.paymentStatus === 'REFUNDED'
+                                                    }">
+                                                      {{ order.paymentStatus }}
+                                                    </span>
+                                                  </p>
+
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <p class="card-text"><span>Total amount: </span>{{ orderItem.totalPrice |
+                                                    currency:'INR' }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-3 text-center">
+                      <!-- Cancel Order Button -->
+                      <button class="btn cancel-btn" (click)="confirmCancellation(order.orderId)"
+                          [disabled]="order.orderStatus === 'CANCELLED' || order.paymentStatus === 'NOT PAID' || order.orderStatus === 'Delivered' || order.orderStatus === 'Canceled'">
+                          Cancel Order
+                      </button>
+
+                      <!-- Download Invoice Button -->
+                      <button class="btn invoice-btn mx-2" (click)="downloadInvoice(order)"
+                          *ngIf="order.orderStatus === 'Delivered' && order.paymentStatus !== 'NOT PAID'">
+                          Download Invoice
+                      </button>
+                  </div>
+
+
+
+                    <!-- Popup modal for confirming terms and conditions -->
+                    <div *ngIf="isTermsModalVisible" class="modal fade show d-block" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="terms-content">
+                                        <h6><strong>Terms and Conditions</strong></h6>
+                                        <p class="mb-4">
+                                            <strong>CANCELLATION POLICY:</strong> <br>
+                                            • You can cancel a prepaid order by emailing us at <a
+                                                href="mailto:shineorganicskpm@gmail.com">shineorganicskpm&#64;gmail.com</a> within 24 hours of
+                                            placing the order.<br>
+                                            • Orders cannot be cancelled once dispatched from our warehouse.<br>
+                                            • Any modifications must be made by cancelling and reordering.<br>
+                                            • Cancelling after shipment will result in a 5% to 10% refund deduction.<br>
+                                            • If stock is unavailable for 30+ days, a full refund will be processed.<br>
+                                            <strong>REJECTED UPON ARRIVAL:</strong> <br>
+                                            • Rejected orders will be canceled when returned to the warehouse.<br>
+                                            • Refunds for prepaid orders will incur a cancellation charge of 5-10%.<br>
+                                            <strong>RETURN POLICY:</strong> <br>
+                                            • Returns are accepted within three days for incorrect, mismatched, or damaged orders.<br>
+                                            • A reverse pickup will be arranged, and the refund will be processed once the item is
+                                            confirmed.<br>
+                                            • For damaged products, please contact us within 24 hours for replacement or refund.<br>
+                                            • No returns for allergy-related issues, scent or color preferences.<br>
+                                            • Always check the ingredients list before use.<br>
+                                            <strong>OUT OF STOCK ITEMS:</strong> <br>
+                                            • For out-of-stock items, please check availability later.<br>
+                                        </p>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="acceptTerms"
+                                                [(ngModel)]="acceptedTerms">
+                                            <label class="form-check-label" for="acceptTerms">
+                                                I accept the terms and conditions
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" [disabled]="!acceptedTerms"
+                                        (click)="acceptTermsAndCancel()">
+                                        OK
+                                    </button>
+                                    <button class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="message" class="alert alert-success mt-3">{{ message }}</div>
+                    <div *ngIf="error" class="alert alert-danger mt-3">{{ error }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

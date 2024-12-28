@@ -1,0 +1,726 @@
+[
+  {
+   "id": 18,
+   "category":  "Baby Care",
+   "subcategory":  "babysope",
+    "trend":true,
+    "feature":true,
+    "special":true,
+   "mainimage": "assets/images/shine/baby care/face-body-wash-2.webp",
+     "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+    "threeDImages": [
+    "assets/images/shine/3d images/product id18/1.png", 
+    "assets/images/shine/3d images/product id18/2.png",
+     "assets/images/shine/3d images/product id18/3.png",
+  "assets/images/shine/3d images/product id18/4.png",
+  "assets/images/shine/3d images/product id18/5.png",
+  "assets/images/shine/3d images/product id18/6.png"
+
+   
+  ],
+  
+  "cards": [
+    {
+      "image": "assets/images/shine/ingredients/Ingredients_1_small.webp",
+      "title": "Why this source?",
+      "text": "Our Blood Orange Essential Oil comes from Sicily (Italy) because it grows extremely well in and around the volcanic environmental conditions created by Mount Etna. Our Rosehip Oil comes from Lesotho because the cold weather and high altitude of its unique terrain is traditionally well-suited to this plant."
+    },
+    {
+      "image": "assets/images/shine/ingredients/Formulation_1_small.webp",
+      "title": "Why this formulation?",
+      "text": "This lip balm for pigmented lips delivers super nutrients like: Antioxidants, Flavonoids, and Phenols help reduce the impact of free radical damage. Essential Fatty Acids deeply moisturise and nourish the skin. Terpenes, specifically monoterpenes help soothe the skin while stimulating blood circulation. Plant Vitamins like vitamin E nourish and deeply moisturise the skin, while vitamin C evens out pigmentation."
+    },
+    {
+      "image": "assets/images/shine/ingredients/Source_1_small.avif",
+      "title": "Why try this?",
+      "text": "This 100% natural lip balm is Clinically Tested and proven safe by dermatologists. Certified Organic Lip Balm. Reduces lip pigmentation by 16.98% in 28 days."
+    }
+    
+  ],
+   "thumbnail": "assets/images/shine/baby care/face-body-wash-2.webp",
+   "title": "Baby Wash",
+   "name":"Baby Wash",
+   "suitable":"Dry, chapped & pigmented lips",
+   "benefit" :"A piece of jewelry worn around the neck, often featuring a pendant or gemstones.",
+   "description":"Description: A deep nourishing Ecocert Certified organic lip balm that is the ultimate care for your delicate lips. Just one swipe of this conditioning, non-sticky lip balm gives your lips a long-lasting moisture surge.It is formulated with certified organic ingredients like rosehip seed oil, castor oil, and cocoa butter rich in Pro-Vitamin A, C & E, and Omega-3, -6 and -9 fatty acids & ceramides. This unique formula penetrates the skin's deep layers to regenerate cells, repair the natural barrier and boost collagen synthesis.This formula delivers the ultimate remedy for dehydrated, sore & sensitive lips, dark pigmented lips due to smoking, sun exposure, increased caffeine intake, habitual subconscious lip licking or wearing harsh long-wearing lipstick.",
+   "keybenefit":"Key Benefits: It reduces the appearance of dark lips It reduces the appearance of dark lips, increases lip suppleness and hydration, heals dry and chapped lips and protects from environmental factors such as wind & cold weather.",
+   "size":"5g",
+   "mrp":500,
+   "price": 500,
+   "discount": "10",
+   "rating": 5,
+   "favorited": true
+ },
+  {
+   "id": 19,
+   "category": "Baby Care",
+   "subcategory":  "babysope",
+    "trend":true,
+    "feature":true,
+    "special":true,
+    "mainimage":"assets/images/shine/baby care/face-body-wash-2.webp",
+     "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/baby care/face-body-wash-2.webp",
+   "title": "Baby Wash",
+   "name": "Baby Wash",
+  "suitable":"Dry, chapped & pigmented lips",
+  "benefit" :"Adornments worn on the ears, ranging from simple studs to elaborate dangling designs.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":500,
+    "price": 400,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false,
+   "cards": [
+    {
+      "image": "assets/images/shine/ingredients/Ingredients_1_small.webp",
+      "title": "Why this source?",
+      "text": "Our Blood Orange Essential Oil comes from Sicily (Italy) because it grows extremely well in and around the volcanic environmental conditions created by Mount Etna. Our Rosehip Oil comes from Lesotho because the cold weather and high altitude of its unique terrain is traditionally well-suited to this plant."
+    },
+    {
+      "image": "assets/images/shine/ingredients/Formulation_1_small.webp",
+      "title": "Why this formulation?",
+      "text": "This lip balm for pigmented lips delivers super nutrients like: Antioxidants, Flavonoids, and Phenols help reduce the impact of free radical damage. Essential Fatty Acids deeply moisturise and nourish the skin. Terpenes, specifically monoterpenes help soothe the skin while stimulating blood circulation. Plant Vitamins like vitamin E nourish and deeply moisturise the skin, while vitamin C evens out pigmentation."
+    },
+    {
+      "image": "assets/images/shine/ingredients/Source_1_small.avif",
+      "title": "Why try this?",
+      "text": "This 100% natural lip balm is Clinically Tested and proven safe by dermatologists. Certified Organic Lip Balm. Reduces lip pigmentation by 16.98% in 28 days."
+    }
+    
+  ]
+ },
+  {
+   "id": 20,
+   "category": "Baby Care",
+    "trend":true,
+    "feature":true,
+    "special":true,
+
+    "mainimage": "assets/images/shine/body care/BodyLotion.webp",
+     "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/body care/BodyLotion.webp",
+   "title": "Bracelet",
+   "name": "Bracelet",
+    "suitable":"Dry, chapped & pigmented lips",
+    "benefit":"A decorative band or chain worn around the wrist.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":5000,
+    "price": 4500,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+   "id": 21,
+   "category": "body care",
+    "trend":true,
+    "feature":true,
+    "special":true,
+    "mainimage":"assets/images/shine/body care/Hibiscus Oil Ingredients for hand and body.webp",
+     "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/body care/Hibiscus Oil Ingredients for hand and body.webp",
+
+   "title": "Ring",
+   "name": "Ring",
+    "suitable":"Dry, chapped & pigmented lips",
+    "benefit":"A circular band worn on the fingers, often symbolizing love, commitment, or fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":600,
+   "price": 1210,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+   "id": 22,
+   "category": "face care",
+    "trend":false,
+    "feature":true,
+    "special":true,
+    "mainimage": "assets/images/shine/face care/beetroot face wash.avif",
+     "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/beetroot face wash.avif",
+
+   "title": "face care",
+   "name": "face care",
+    "suitable":"Dry, chapped & pigmented lips",
+    "benefit":"A rigid bracelet, typically worn in multiples, and often made of metal or glass.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+   "price": 980,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+
+     "category": "face care",
+   "id": 23,
+   "mainimage": "assets/images/shine/face care/face-wash.avif",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/face-wash.avif",
+
+   "title": "Pendant",
+   "name": "Pendant",
+    "suitable":"Dry, chapped & pigmented lips",
+    "benefit":"A decorative charm that hangs from a necklace, adding a focal point.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+    "price": 980,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false
+ },
+
+  {
+
+     "category": "hair care",
+   "id": 24,
+    "mainimage": "assets/images/shine/hair care/hair_onion-oil.avif",
+     "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/hair care/hair_onion-oil.avif",
+
+   "title": "hair care",
+   "name": "hair care",
+    "suitable":"Dry, chapped & pigmented lips",
+    "benefit":"A decorative pin, often worn on clothing, that serves as both an accessory and a fastener.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+   "price": 3000,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+
+     "category": "hair care",
+   "id": 25,
+   "mainimage": "assets/images/shine/hair care/Rosemary hair oil.avif",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/hair care/Rosemary hair oil.avif",
+
+   "title": "rosemary oil",
+   "name": "rosemary oil",
+    "suitable":"Dry, chapped & pigmented lips",
+    "benefit":"A chain or band worn around the ankle, adding a touch of elegance to the feet.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+   "price": 450,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+     "category": "new launches",
+   "id": 26,
+   "mainimage": "assets/images/jellary/2a.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/jellary/2a.jpg",
+
+   "title": "Cufflinks",
+   "name": "Cufflinks",
+   "suitable":"Dry, chapped & pigmented lips",
+   "benefit":"Decorative fasteners used to secure the cuffs of dress shirts, often considered a symbol of sophistication.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+  "price": 7600,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+     "category": "new launches",
+   "id": 27,
+   "mainimage": "assets/images/jellary/4a.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/jellary/4a.jpg",
+
+   "title": "Tiara",
+   "name": "Tiara",
+   "suitable":"Dry, chapped & pigmented lips",
+   "benefit":"A crown-like piece of jewelry, worn on the head, often associated with royalty or special occasions.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+   "price": 9000,
+   "discount": "10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+     "category": "new launches",
+   "id": 28,
+   "mainimage": "assets/images/jellary/2a.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/jellary/2a.jpg",
+
+   "title": "Choker",
+   "name": "Choker",
+   "benefit":"A close-fitting necklace worn around the neck, often made of fabric, metal, or leather.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+   "price": 9760,
+   "discount": "10",
+    "suitable ":"Dry, chapped & pigmented lips",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+     "category": "new launchest",
+   "id": 29,
+   "mainimage": "assets/images/jellary/3a.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/jellary/3a.jpg",
+
+   "title": "Charm Bracelet",
+   "name": "Charm Bracelet",
+   "benefit":"A bracelet featuring small trinkets or charms that represent personal memories or interests.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+    "price": 4560,
+   "discount": "10",
+    "suitable":"Dry, chapped & pigmented lips",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+     "category": "face care",
+   "id": 30,
+    "mainimage":"assets/images/shine/face care/face-wash.avif",
+     "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/face-wash.avif",
+
+   "title": "Cameo",
+   "name": "Cameo",
+   "benefit":"A piece of jewelry featuring a raised relief image, typically carved from materials like shell or stone.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"500",
+   "price": 8770,
+   "discount": "10",
+    "suitable":"Dry, chapped & pigmented lips",
+   "rating": 4.5,
+   "favorited": false
+ },
+ {
+   "category": "face care",
+   "id": 31,
+   "mainimage": "assets/images/shine/face care/beetroot face wash.avif",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/beetroot face wash.avif",
+
+
+   "title": "beetroot",
+   "name": "beetroot",
+   "benefit":"A pendant that opens to reveal a small space used to store a photo or memento.",
+   "description":"",
+   "keybenefit":"",
+    "suitable":"Dry, chapped & pigmented lips",
+   "size":"5g",
+   "mrp":"1330",
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+     "category": "body care",
+   "id": 32,
+   "mainimage": "assets/images/shine/body care/Hibiscus Oil Ingredients for hand and body.webp",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/body care/Hibiscus Oil Ingredients for hand and body.webp",
+
+   "title": "Body care",
+   "name":"Toe Ring",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+    "suitable":"Dry, chapped & pigmented lips",
+   "size":"5g",
+   "mrp":"1330",
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+ {
+  "category": "hair care",
+   "id": 35,
+   "mainimage": "assets/images/shine/body care/Hibiscus Oil Ingredients for hand and body.webp",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/hair care/hair_onion-oil.avif",
+
+   "title": "Toe Ring",
+   "name":"Toe Ring",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"1330",
+    "suitable":"Dry, chapped & pigmented lips",
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+ {
+  "category": "skin care",
+   "id": 36,
+   "mainimage": "assets/images/shine/face care/beetroot face wash.avif",
+   "thumbnail": "assets/images/shine/face care/beetroot face wash.avif",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+
+   "title": "face oil",
+   "name":"face oil",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+   "mrp":"1330",
+   "price":1199,
+   "discount":"10",
+    "suitable":"Dry, chapped & pigmented lips",
+   "rating": 4.5,
+   "favorited": false
+ },
+ {
+  "category": "skin care",
+   "id": 37,
+   "mainimage": "assets/images/shine/face care/beetroot face wash.avif",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/beetroot face wash.avif",
+
+   "title": "face cream",
+   "name":"face cream",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+    "suitable":"Dry, chapped & pigmented lips",
+   "mrp":1330,
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+  "category": "face care",
+  "subcategory": "Lipstick",
+  "color": "rose",
+   "id": 38,
+   "mainimage": "assets/images/shine/face care/lipstick/drak rose.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/lipstick/drak rose.jpg",
+
+   "title": "Lipstick",
+   "name":"Lipstick",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+    "suitable":"Dry, chapped & pigmented lips",
+   "mrp":1330,
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+  "category": "face care",
+  "subcategory": "Lipstick",
+  "color": "pink",
+   "id": 39,
+   "mainimage": "assets/images/shine/face care/lipstick/light pink.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/lipstick/light pink.jpg",
+
+   "name":"Lipstick",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+    "suitable":"Dry, chapped & pigmented lips",
+   "mrp":1330,
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+  "category": "face care",
+  "subcategory": "Lipstick",
+  "color": "pink",
+   "id": 40,
+   "mainimage": "assets/images/shine/face care/lipstick/pink.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/lipstick/pink.jpg",
+
+   "title": "Toe Ring",
+   "name":"Lipstick",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+    "suitable":"Dry, chapped & pigmented lips",
+   "mrp":1330,
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+  "category": "face care",
+  "subcategory": "Lipstick",
+  "color": "red",
+   "id": 41,
+   "mainimage": "assets/images/shine/face care/lipstick/red.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/lipstick/red.jpg",
+
+   "title": "Toe Ring",
+   "name":"Lipstick",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+    "suitable":"Dry, chapped & pigmented lips",
+   "mrp":1330,
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+  "category": "face care",
+  "subcategory": "Lipstick",
+   "id": 42,
+   "mainimage": "assets/images/shine/face care/lipstick/rose.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/lipstick/rose.jpg",
+   "title": "Toe Ring",
+   "name":"Lipstick",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+    "suitable":"Dry, chapped & pigmented lips",
+   "mrp":1330,
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ },
+  {
+  "category": "face care",
+  "subcategory": "Lipstick",
+   "id": 43,
+   "mainimage": "assets/images/shine/face care/lipstick/skin colour.jpg",
+    "images": [
+    "assets/images/shine/baby care/face-body-wash-2.webp",
+   "assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp",
+"assets/images/shine/baby care/face-body-wash-2.webp"
+  ],
+   "thumbnail": "assets/images/shine/face care/lipstick/skin colour.jpg",
+
+   "title": "Toe Ring",
+   "name":"Lipstick",
+   "benefit":"A small ring worn on one of the toes, often seen in bohemian or beach fashion.",
+   "description":"",
+   "keybenefit":"",
+   "size":"5g",
+    "suitable":"Dry, chapped & pigmented lips",
+   "mrp":1330,
+   "price":1199,
+   "discount":"10",
+   "rating": 4.5,
+   "favorited": false
+ }
+
+]

@@ -1,0 +1,149 @@
+.explain-block {
+  border-block-start-width: 0;
+
+  .explain-main {
+    background-color: #fff;
+    padding: 80px 0;
+  }
+
+  .explain-wrap {
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+
+    .explain-header {
+      letter-spacing: 0;
+      text-transform: none;
+      font-family: Lora, serif !important;
+      font-size: 36px;
+      line-height: 35px;
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+
+    p {
+      letter-spacing: 0;
+      text-transform: none;
+      font-size: 16px;
+      text-align: center;
+      padding: 0 30px;
+    }
+
+  }
+
+  .explain-formBlock {
+    margin-top: 50px;
+
+    .explain-handle-left {
+      padding-left: 150px;
+
+      .explain-img {
+        position: absolute;
+        left: 0;
+      }
+
+    }
+
+    .explain-handle-right {
+      padding-right: 150px;
+
+      .explain-img {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .explain-head {
+      max-width: 350px;
+      width: 100%;
+    }
+
+    .explain-position {
+      position: relative;
+    }
+
+    .explain-img {
+      width: 120px;
+      height: 120px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .explain-card {
+      .header {
+        color: #000000;
+        letter-spacing: 1.3px;
+        // text-transform: uppercase;
+        font-size: 22px;
+        font-family: NimbusSan-Bold;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      .explain-desc {
+        font-size: 16px;
+        padding: 0;
+        text-align: left;
+        font-family: Lora, serif;
+      }
+    }
+  }
+}
+
+
+@media (max-width:500px) {
+  .explain-block {
+    .explain-main {
+      padding: 20px 0;
+
+      .explain-wrap {
+        p {
+          font-size: 16px;
+          letter-spacing: 1;
+          padding: 0 10px;
+        }
+
+        .explain-header {
+          font-size: 20px;
+          line-height: 1.5;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .explain-formBlock {
+      .explain-position {
+        .explain-card {
+          .explain-head {
+            .header {
+              font-size: 18px;
+              margin-bottom: 5px;
+            }
+          }
+
+          .explain-desc {
+            font-size: 14px;
+            // text-align: justify;
+          }
+        }
+      }
+
+      .explain-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1000px !important;
+  }
+}

@@ -1,0 +1,71 @@
+<nav class="navTab-block" *ngIf="showNavbar">
+<ul class="navTab-items">
+  <li>
+    <a routerLink="/shine" routerLinkActive="active-shine" class="navTab-item">
+      <img src="assets/images/shine-logo.svg" alt="SHINE ORGANICS" style="width: 165px;">
+    </a>
+  </li>
+  <li>
+    <a routerLink="/sheshine" routerLinkActive="active-sheshine" class="navTab-item">
+      <img src="assets/images/sheshine-logo.svg" alt="SHESHINE">
+    </a>
+  </li>
+</ul>
+
+
+
+
+  <div class="nav">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search by name or price" [(ngModel)]="searchQuery" (input)="onSearchChange()"
+      (click)="onProduct()">
+    <span class="input-group-text">
+      <i class="bi bi-search"></i> <!-- Search icon -->
+    </span>
+  </div>
+
+  <div id="login">
+    <ng-container *ngIf="isLoggedIn(); else loginLink">
+      <!-- Profile Button with Dropdown -->
+      <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <img class="userphoto" height="30px" width="30px" [src]="'data:image/png;base64,'+userProfile?.avatarUrl"
+            alt="Profile" />
+        </button>
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+          <li><a class="dropdown-item" routerLink="/orders">My Orders</a></li>
+          <li><a class="dropdown-item" ttype="button" class="btn probtn" data-bs-toggle="modal" data-bs-target="#userProfileModal"  *ngIf="user">Profile</a></li>
+          <li><a class="dropdown-item" routerLink="/favorit">Favorite</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" (click)="signOut()" >Logout</a></li>
+        </ul>
+      </div>
+    </ng-container>
+
+    <!-- Login Link if User is Not Logged In -->
+    <ng-template #loginLink>
+      <a class="login" routerLink="/toggle">
+        <img height="30px" width="30px" src="assets/images/navtab/person-circle.svg" alt="Login">
+      </a>
+    </ng-template>
+  </div>
+
+    <div id="cart"  routerLink="/cart" class="cart-container">
+      <a routerLink="/cart" class="cart">
+        <img height="30px" width="30px" src="assets/images/navtab/cart.svg" alt="Cart">
+      </a>
+      <span class="cart-count">{{ cartCount }}</span>
+
+    </div>
+  </div>
+</nav>
+<div *ngIf="showKpnRunner">
+  <app-kpnrunner></app-kpnrunner>
+</div>
+
+<router-outlet></router-outlet>
+<app-user-profile *ngIf="isLoggedIn()"></app-user-profile>

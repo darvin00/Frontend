@@ -1,0 +1,205 @@
+// Variables for consistent styling
+$primary-color: #0d6efd;
+$secondary-color: #6c757d;
+$light-bg: #f8f9fa;
+$dark-text: #212529;
+$warning-color: #ffc107;
+$success-color: #28a745;
+
+// General styles
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.review-mainBlock {
+  padding: 2rem;
+  background-color: $light-bg;
+
+  .review-headerBlock {
+    .review-header {
+      color: $dark-text;
+      font-weight: 600;
+    }
+
+    .review-desc {
+      color: $secondary-color;
+      font-size: 0.9rem;
+    }
+  }
+
+  .review-areaBlock {
+    .review-overAll {
+      background-color: #fff;
+      border: 1px solid $light-bg;
+      border-radius: 8px;
+
+      .review-areaHead {
+        font-weight: 500;
+        color: $dark-text;
+      }
+
+      .star-rating {
+        .star {
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: $secondary-color;
+
+          &.filled {
+            color: $warning-color;
+          }
+
+          &:hover {
+            transform: scale(1.2);
+            transition: transform 0.2s ease-in-out;
+          }
+        }
+      }
+
+      textarea {
+        width: 100%;
+        border: 1px solid $secondary-color;
+        border-radius: 4px;
+        padding: 0.5rem;
+        color: $dark-text;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+          box-shadow: 0 0 5px rgba($primary-color, 0.5);
+        }
+      }
+
+      button {
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+
+        &:disabled {
+          background-color: darken($primary-color, 10%);
+          cursor: not-allowed;
+        }
+
+        &:hover {
+          background-color: lighten($primary-color, 10%);
+          transition: background-color 0.2s;
+        }
+      }
+    }
+  }
+
+  .over-allreview-update {
+    .reviews-section {
+      .review-allReviewHead {
+        color: $dark-text;
+        font-weight: 600;
+      }
+
+      .alert {
+        &.alert-warning {
+          background-color: $warning-color;
+          color: $dark-text;
+        }
+
+        &.alert-success {
+          background-color: $success-color;
+          color: #fff;
+        }
+      }
+
+      .overall-reviewBlockMain {
+        .overall-reviewBlock {
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          padding: 1rem;
+
+          .profile-img {
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+
+          .review {
+            p {
+              font-size: 0.9rem;
+              color: $dark-text;
+            }
+
+            textarea {
+              width: 100%;
+              resize: none;
+            }
+          }
+
+          button {
+            &.btn-secondary {
+              background-color: $secondary-color;
+              color: #fff;
+
+              &:hover {
+                background-color: darken($secondary-color, 10%);
+              }
+            }
+
+            &.btn-success {
+              background-color: $success-color;
+              color: #fff;
+
+              &:hover {
+                background-color: lighten($success-color, 10%);
+              }
+            }
+
+            &.btn-danger {
+              background-color: red;
+              color: #fff;
+
+              &:hover {
+                background-color: darkred;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .review-mainBlock {
+    padding: 1rem;
+
+    .review-areaBlock {
+      .review-overAll {
+        padding: 1rem;
+      }
+    }
+
+    .over-allreview-update {
+      .overall-reviewBlockMain {
+        .overall-reviewBlock {
+          padding: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .review-mainBlock {
+    padding: 0.5rem;
+
+    .review-areaBlock {
+      .review-overAll {
+        padding: 0.5rem;
+      }
+    }
+  }
+}

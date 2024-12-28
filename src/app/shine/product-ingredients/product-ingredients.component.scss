@@ -1,0 +1,29 @@
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    
+}
+.container-fluid{
+    background-color: rgb(249, 115, 115);
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    min-width: 33.33%; // For 3 cards per view
+}
+
+@media (max-width: 992px) {
+    .carousel-card {
+        min-width: 50%; // For 2 cards per view on tablets
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-card {
+        min-width: 100%; // For 1 card per view on mobile
+    }
+}

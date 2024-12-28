@@ -1,0 +1,44 @@
+<div class="form-container sign-in" [ngClass]="{'active': isLogin}">
+  
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h4>Login</h4>
+    <span>Enter your email id and password</span>
+
+    <div class="formInput">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+        <div class="validation" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+            Valid email is required.
+        </div>
+    </div>
+
+    <div class="formInput">
+        <label for="password">Password</label>
+        <!-- Password Input with Toggle Icon -->
+        <div class="password-wrapper">
+            <input id="password" [type]="showPassword ? 'text' : 'password'" formControlName="password">
+            <i class="toggle-icon" (click)="togglePasswordVisibility()">
+                <!-- Show/Hide Password Icon -->
+                <span *ngIf="!showPassword"><i class="bi bi-eye"></i></span> <!-- Eye icon for "Show" -->
+                <span *ngIf="showPassword"><i class="bi bi-eye-slash"></i></span> <!-- Eye slash icon for "Hide" -->
+            </i>
+        </div>
+        <div  class="validation" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+            Password is required.
+        </div>
+    </div>
+
+    <div *ngIf="errorMessage">
+        <p>{{ errorMessage }}</p>
+    </div>
+
+    <a routerLink="/forgotpassword">Forget Your Password?</a>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid || isLoggingIn">
+        {{ isLoggingIn ? 'Logging in...' : 'Login' }}
+    </button>
+
+    <!-- Signup Link for Mobile -->
+    <a class="signupformobile" routerLink="/signup">Signup &#8594;</a>
+</form>
