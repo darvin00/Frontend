@@ -1,6 +1,11 @@
-<div class="image-container" (mousedown)="startRotation($event)" (mousemove)="rotateImage($event)"
-  (mouseup)="stopRotation()" (mouseleave)="stopRotation()" (touchstart)="startRotation($event)"
-  (touchmove)="rotateImage($event)" (touchend)="stopRotation()">
-
-  <img [src]="images[currentIndex]" alt="360 view image" id="product-image">
+<div
+  class="image-360-container"
+  (mousedown)="startRotation($event)"
+  (mousemove)="rotateImage($event)"
+  (mouseup)="stopRotation()"
+  (touchstart)="startRotation($event)"
+  (touchmove)="rotateImage($event)"
+  (touchend)="stopRotation()"
+>
+  <img [src]="images[currentIndex]" alt="360 view image" class="image-360-image" />
 </div>
