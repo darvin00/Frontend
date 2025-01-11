@@ -71,7 +71,7 @@
                 }
               ],
               "outputHashing": "all",
-              "terser": { "drop_console": true  }
+              
             },
             "development": {
               "optimization": false,
