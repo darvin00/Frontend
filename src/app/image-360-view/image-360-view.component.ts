@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-image-360-view',
@@ -7,50 +7,76 @@ import { Component } from '@angular/core';
 })
 export class Image360ViewComponent {
   images: string[] = [
-    'assets/images/360 images/Screenshot 2024-08-19 141759.png', 'assets/images/360 images/Screenshot 2024-08-19 141811.png',
-    'assets/images/360 images/Screenshot 2024-08-19 141827.png', 'assets/images/360 images/Screenshot 2024-08-19 141827.png',
-    'assets/images/360 images/Screenshot 2024-08-19 141838.png', 'assets/images/360 images/Screenshot 2024-08-19 141838.png',
-    'assets/images/360 images/Screenshot 2024-08-19 141905.png', 'assets/images/360 images/Screenshot 2024-08-19 141916.png'
+    'assets/images/360 images/Screenshot 2024-08-19 141759.png',
+    'assets/images/360 images/Screenshot 2024-08-19 141811.png',
+    'assets/images/360 images/Screenshot 2024-08-19 141827.png',
+    'assets/images/360 images/Screenshot 2024-08-19 141838.png',
+    'assets/images/360 images/Screenshot 2024-08-19 141905.png',
+    'assets/images/360 images/Screenshot 2024-08-19 141916.png'
   ];
 
   currentIndex = 0;
   isDragging = false;
-  startX: number = 0;
+  startX = 0;
+  sensitivity = 10; // Adjust rotation sensitivity
 
-  startRotation(event: MouseEvent | TouchEvent) {
+  /**
+   * Start rotation when mouse or touch interaction begins
+   */
+  startRotation(event: MouseEvent | TouchEvent): void {
     this.isDragging = true;
-    this.startX = this.isTouchEvent(event) ? event.touches[0].clientX : (event as MouseEvent).clientX;
+    this.startX = this.getClientX(event);
   }
 
-  rotateImage(event: MouseEvent | TouchEvent) {
+  /**
+   * Handle image rotation during drag/touch movement
+   */
+  rotateImage(event: MouseEvent | TouchEvent): void {
     if (!this.isDragging) return;
 
-    const currentX = this.isTouchEvent(event) ? event.touches[0].clientX : (event as MouseEvent).clientX;
+    const currentX = this.getClientX(event);
     const deltaX = this.startX - currentX;
 
-    if (Math.abs(deltaX) > 10) {  // Adjust sensitivity
-      if (deltaX > 0) {
-        this.nextImage();
-      } else {
-        this.prevImage();
-      }
-      this.startX = currentX;
+    if (Math.abs(deltaX) > this.sensitivity) {
+      deltaX > 0 ? this.nextImage() : this.prevImage();
+      this.startX = currentX; // Reset starting position for smoother rotation
     }
   }
 
-  stopRotation() {
+  /**
+   * Stop rotation when interaction ends
+   */
+  stopRotation(): void {
     this.isDragging = false;
   }
 
-  prevImage() {
-    this.currentIndex = (this.currentIndex > 0) ? this.currentIndex - 1 : this.images.length - 1;
+  /**
+   * Navigate to the previous image
+   */
+  prevImage(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
-  nextImage() {
-    this.currentIndex = (this.currentIndex < this.images.length - 1) ? this.currentIndex + 1 : 0;
+  /**
+   * Navigate to the next image
+   */
+  nextImage(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
-  private isTouchEvent(event: MouseEvent | TouchEvent): event is TouchEvent {
-    return 'touches' in event;
+  /**
+   * Extract clientX from mouse or touch event
+   */
+  private getClientX(event: MouseEvent | TouchEvent): number {
+    return 'touches' in event ? event.touches[0].clientX : event.clientX;
+  }
+
+  /**
+   * Ensure drag/touch ends are handled globally
+   */
+  @HostListener('window:mouseup')
+  @HostListener('window:touchend')
+  handleGlobalStop(): void {
+    this.stopRotation();
   }
 }
